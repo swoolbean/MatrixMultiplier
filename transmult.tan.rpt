@@ -1,0 +1,681 @@
+Classic Timing Analyzer report for transmult
+Mon Dec 05 14:20:28 2016
+Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                          ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                 ; To                                       ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 7.589 ns                         ; cf_load                              ; controller:inst2|output_counter[0]       ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.894 ns                         ; mac:mac1|feedback_gate:inst1|dout[1] ; mac1out[1]                               ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.954 ns                        ; din[6]                               ; matrix_register:inst|reg8bit:a14|dout[6] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 30.36 MHz ( period = 32.938 ns ) ; controller:inst2|mac1b_sel[1]        ; mac:mac1|dcfilter:inst3|addin[15]        ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                      ;                                          ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------------+------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP1C3T100A8        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; -40                ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 125                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                            ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                          ; To                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 30.36 MHz ( period = 32.938 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 16.156 ns               ;
+; N/A                                     ; 30.75 MHz ( period = 32.518 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.946 ns               ;
+; N/A                                     ; 30.82 MHz ( period = 32.444 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 15.909 ns               ;
+; N/A                                     ; 30.97 MHz ( period = 32.290 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 15.832 ns               ;
+; N/A                                     ; 31.03 MHz ( period = 32.222 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 15.798 ns               ;
+; N/A                                     ; 31.13 MHz ( period = 32.126 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 15.750 ns               ;
+; N/A                                     ; 31.23 MHz ( period = 32.024 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.699 ns               ;
+; N/A                                     ; 31.38 MHz ( period = 31.870 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.622 ns               ;
+; N/A                                     ; 31.44 MHz ( period = 31.802 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.588 ns               ;
+; N/A                                     ; 31.55 MHz ( period = 31.692 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 15.533 ns               ;
+; N/A                                     ; 31.61 MHz ( period = 31.632 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 15.503 ns               ;
+; N/A                                     ; 31.64 MHz ( period = 31.608 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 15.543 ns               ;
+; N/A                                     ; 31.64 MHz ( period = 31.608 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.543 ns               ;
+; N/A                                     ; 31.64 MHz ( period = 31.608 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 15.543 ns               ;
+; N/A                                     ; 31.71 MHz ( period = 31.532 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 15.453 ns               ;
+; N/A                                     ; 31.84 MHz ( period = 31.410 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 15.392 ns               ;
+; N/A                                     ; 31.95 MHz ( period = 31.298 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 15.336 ns               ;
+; N/A                                     ; 32.00 MHz ( period = 31.254 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 15.314 ns               ;
+; N/A                                     ; 32.05 MHz ( period = 31.198 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 15.286 ns               ;
+; N/A                                     ; 32.05 MHz ( period = 31.198 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 15.286 ns               ;
+; N/A                                     ; 32.08 MHz ( period = 31.172 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 15.325 ns               ;
+; N/A                                     ; 32.08 MHz ( period = 31.172 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.325 ns               ;
+; N/A                                     ; 32.08 MHz ( period = 31.172 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 15.325 ns               ;
+; N/A                                     ; 32.08 MHz ( period = 31.170 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 15.324 ns               ;
+; N/A                                     ; 32.19 MHz ( period = 31.064 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 15.219 ns               ;
+; N/A                                     ; 32.22 MHz ( period = 31.038 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 15.206 ns               ;
+; N/A                                     ; 32.25 MHz ( period = 31.010 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 15.244 ns               ;
+; N/A                                     ; 32.28 MHz ( period = 30.976 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 15.175 ns               ;
+; N/A                                     ; 32.43 MHz ( period = 30.834 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.104 ns               ;
+; N/A                                     ; 32.45 MHz ( period = 30.816 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 15.095 ns               ;
+; N/A                                     ; 32.54 MHz ( period = 30.734 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 15.054 ns               ;
+; N/A                                     ; 32.54 MHz ( period = 30.734 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 15.106 ns               ;
+; N/A                                     ; 32.57 MHz ( period = 30.704 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 15.039 ns               ;
+; N/A                                     ; 32.63 MHz ( period = 30.644 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 15.009 ns               ;
+; N/A                                     ; 32.71 MHz ( period = 30.574 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 15.026 ns               ;
+; N/A                                     ; 32.81 MHz ( period = 30.482 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 14.928 ns               ;
+; N/A                                     ; 32.85 MHz ( period = 30.442 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 14.908 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.298 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 14.836 ns               ;
+; N/A                                     ; 33.06 MHz ( period = 30.252 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 14.813 ns               ;
+; N/A                                     ; 33.06 MHz ( period = 30.244 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 14.861 ns               ;
+; N/A                                     ; 33.06 MHz ( period = 30.244 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 14.861 ns               ;
+; N/A                                     ; 33.06 MHz ( period = 30.244 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 14.861 ns               ;
+; N/A                                     ; 33.07 MHz ( period = 30.240 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.807 ns               ;
+; N/A                                     ; 33.13 MHz ( period = 30.180 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 14.829 ns               ;
+; N/A                                     ; 33.18 MHz ( period = 30.138 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 14.756 ns               ;
+; N/A                                     ; 33.31 MHz ( period = 30.018 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.696 ns               ;
+; N/A                                     ; 33.32 MHz ( period = 30.008 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 14.691 ns               ;
+; N/A                                     ; 33.47 MHz ( period = 29.876 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 14.625 ns               ;
+; N/A                                     ; 33.50 MHz ( period = 29.848 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 14.611 ns               ;
+; N/A                                     ; 33.54 MHz ( period = 29.818 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 14.596 ns               ;
+; N/A                                     ; 33.55 MHz ( period = 29.806 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 14.642 ns               ;
+; N/A                                     ; 33.55 MHz ( period = 29.804 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 14.589 ns               ;
+; N/A                                     ; 33.62 MHz ( period = 29.744 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 14.611 ns               ;
+; N/A                                     ; 33.72 MHz ( period = 29.658 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 14.516 ns               ;
+; N/A                                     ; 33.73 MHz ( period = 29.646 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 14.562 ns               ;
+; N/A                                     ; 33.88 MHz ( period = 29.514 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 14.444 ns               ;
+; N/A                                     ; 34.03 MHz ( period = 29.382 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 14.378 ns               ;
+; N/A                                     ; 34.03 MHz ( period = 29.382 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.430 ns               ;
+; N/A                                     ; 34.08 MHz ( period = 29.340 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.357 ns               ;
+; N/A                                     ; 34.10 MHz ( period = 29.324 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 14.349 ns               ;
+; N/A                                     ; 34.29 MHz ( period = 29.160 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 14.267 ns               ;
+; N/A                                     ; 34.34 MHz ( period = 29.120 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 14.247 ns               ;
+; N/A                                     ; 34.41 MHz ( period = 29.064 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 14.271 ns               ;
+; N/A                                     ; 34.42 MHz ( period = 29.056 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.267 ns               ;
+; N/A                                     ; 34.42 MHz ( period = 29.056 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 14.267 ns               ;
+; N/A                                     ; 34.42 MHz ( period = 29.050 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.212 ns               ;
+; N/A                                     ; 34.55 MHz ( period = 28.946 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.212 ns               ;
+; N/A                                     ; 34.59 MHz ( period = 28.910 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 14.194 ns               ;
+; N/A                                     ; 34.59 MHz ( period = 28.910 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 14.194 ns               ;
+; N/A                                     ; 34.59 MHz ( period = 28.910 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 14.194 ns               ;
+; N/A                                     ; 34.65 MHz ( period = 28.860 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 14.117 ns               ;
+; N/A                                     ; 35.12 MHz ( period = 28.472 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 13.975 ns               ;
+; N/A                                     ; 35.31 MHz ( period = 28.318 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 13.898 ns               ;
+; N/A                                     ; 35.32 MHz ( period = 28.312 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 13.895 ns               ;
+; N/A                                     ; 35.43 MHz ( period = 28.222 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 13.850 ns               ;
+; N/A                                     ; 35.47 MHz ( period = 28.192 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 13.783 ns               ;
+; N/A                                     ; 35.51 MHz ( period = 28.158 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 13.818 ns               ;
+; N/A                                     ; 35.54 MHz ( period = 28.134 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 13.806 ns               ;
+; N/A                                     ; 35.54 MHz ( period = 28.134 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 13.806 ns               ;
+; N/A                                     ; 35.54 MHz ( period = 28.134 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 13.806 ns               ;
+; N/A                                     ; 35.71 MHz ( period = 28.002 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 13.688 ns               ;
+; N/A                                     ; 35.83 MHz ( period = 27.910 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 13.642 ns               ;
+; N/A                                     ; 35.90 MHz ( period = 27.858 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 13.668 ns               ;
+; N/A                                     ; 35.99 MHz ( period = 27.786 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 13.632 ns               ;
+; N/A                                     ; 36.11 MHz ( period = 27.696 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 13.587 ns               ;
+; N/A                                     ; 36.24 MHz ( period = 27.592 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 13.483 ns               ;
+; N/A                                     ; 36.32 MHz ( period = 27.536 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 13.507 ns               ;
+; N/A                                     ; 36.39 MHz ( period = 27.482 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 13.480 ns               ;
+; N/A                                     ; 36.42 MHz ( period = 27.458 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 13.468 ns               ;
+; N/A                                     ; 36.48 MHz ( period = 27.416 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 13.395 ns               ;
+; N/A                                     ; 36.69 MHz ( period = 27.254 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 13.366 ns               ;
+; N/A                                     ; 36.77 MHz ( period = 27.194 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 13.284 ns               ;
+; N/A                                     ; 36.78 MHz ( period = 27.192 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 13.283 ns               ;
+; N/A                                     ; 36.99 MHz ( period = 27.032 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 13.203 ns               ;
+; N/A                                     ; 37.08 MHz ( period = 26.970 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 13.224 ns               ;
+; N/A                                     ; 37.17 MHz ( period = 26.906 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 13.140 ns               ;
+; N/A                                     ; 37.44 MHz ( period = 26.706 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 13.092 ns               ;
+; N/A                                     ; 37.49 MHz ( period = 26.674 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 13.076 ns               ;
+; N/A                                     ; 37.60 MHz ( period = 26.594 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 12.984 ns               ;
+; N/A                                     ; 37.69 MHz ( period = 26.530 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 13.004 ns               ;
+; N/A                                     ; 37.76 MHz ( period = 26.486 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 12.930 ns               ;
+; N/A                                     ; 37.85 MHz ( period = 26.422 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.898 ns               ;
+; N/A                                     ; 37.92 MHz ( period = 26.372 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 12.873 ns               ;
+; N/A                                     ; 37.94 MHz ( period = 26.360 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 12.919 ns               ;
+; N/A                                     ; 38.01 MHz ( period = 26.312 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 12.843 ns               ;
+; N/A                                     ; 38.13 MHz ( period = 26.226 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 12.800 ns               ;
+; N/A                                     ; 38.19 MHz ( period = 26.188 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 12.833 ns               ;
+; N/A                                     ; 38.24 MHz ( period = 26.152 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 12.763 ns               ;
+; N/A                                     ; 38.40 MHz ( period = 26.040 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 12.707 ns               ;
+; N/A                                     ; 38.51 MHz ( period = 25.966 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.722 ns               ;
+; N/A                                     ; 38.53 MHz ( period = 25.954 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 12.716 ns               ;
+; N/A                                     ; 38.60 MHz ( period = 25.908 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 12.693 ns               ;
+; N/A                                     ; 38.63 MHz ( period = 25.888 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.683 ns               ;
+; N/A                                     ; 38.63 MHz ( period = 25.886 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 12.630 ns               ;
+; N/A                                     ; 38.67 MHz ( period = 25.862 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.618 ns               ;
+; N/A                                     ; 38.72 MHz ( period = 25.828 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 12.653 ns               ;
+; N/A                                     ; 38.74 MHz ( period = 25.810 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.592 ns               ;
+; N/A                                     ; 39.05 MHz ( period = 25.606 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 12.490 ns               ;
+; N/A                                     ; 39.11 MHz ( period = 25.566 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 12.522 ns               ;
+; N/A                                     ; 39.15 MHz ( period = 25.544 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.459 ns               ;
+; N/A                                     ; 39.23 MHz ( period = 25.488 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 12.483 ns               ;
+; N/A                                     ; 39.30 MHz ( period = 25.446 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 12.410 ns               ;
+; N/A                                     ; 39.45 MHz ( period = 25.346 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.360 ns               ;
+; N/A                                     ; 39.72 MHz ( period = 25.174 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 12.274 ns               ;
+; N/A                                     ; 39.80 MHz ( period = 25.124 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 12.249 ns               ;
+; N/A                                     ; 39.82 MHz ( period = 25.112 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 12.243 ns               ;
+; N/A                                     ; 39.82 MHz ( period = 25.112 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 12.243 ns               ;
+; N/A                                     ; 39.88 MHz ( period = 25.078 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 12.278 ns               ;
+; N/A                                     ; 40.00 MHz ( period = 25.000 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 12.239 ns               ;
+; N/A                                     ; 40.07 MHz ( period = 24.956 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 12.217 ns               ;
+; N/A                                     ; 40.41 MHz ( period = 24.748 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 12.113 ns               ;
+; N/A                                     ; 40.48 MHz ( period = 24.706 ns )                    ; controller:inst2|mac2a_sel[1] ; mac:mac2|dcfilter:inst3|addin[1]  ; clk        ; clk      ; None                        ; None                      ; 12.092 ns               ;
+; N/A                                     ; 40.50 MHz ( period = 24.692 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 12.033 ns               ;
+; N/A                                     ; 40.57 MHz ( period = 24.648 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 12.011 ns               ;
+; N/A                                     ; 40.63 MHz ( period = 24.614 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 11.994 ns               ;
+; N/A                                     ; 40.63 MHz ( period = 24.612 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 12.045 ns               ;
+; N/A                                     ; 40.67 MHz ( period = 24.586 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 11.980 ns               ;
+; N/A                                     ; 40.69 MHz ( period = 24.574 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 12.026 ns               ;
+; N/A                                     ; 40.69 MHz ( period = 24.574 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 12.026 ns               ;
+; N/A                                     ; 40.69 MHz ( period = 24.574 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 12.026 ns               ;
+; N/A                                     ; 41.12 MHz ( period = 24.320 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 11.847 ns               ;
+; N/A                                     ; 41.15 MHz ( period = 24.300 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 11.837 ns               ;
+; N/A                                     ; 41.21 MHz ( period = 24.264 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[15] ; clk        ; clk      ; None                        ; None                      ; 11.871 ns               ;
+; N/A                                     ; 41.21 MHz ( period = 24.264 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[14] ; clk        ; clk      ; None                        ; None                      ; 11.871 ns               ;
+; N/A                                     ; 41.21 MHz ( period = 24.264 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[13] ; clk        ; clk      ; None                        ; None                      ; 11.871 ns               ;
+; N/A                                     ; 41.41 MHz ( period = 24.148 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 11.813 ns               ;
+; N/A                                     ; 41.69 MHz ( period = 23.988 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 11.733 ns               ;
+; N/A                                     ; 41.72 MHz ( period = 23.972 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 11.725 ns               ;
+; N/A                                     ; 41.84 MHz ( period = 23.902 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 11.638 ns               ;
+; N/A                                     ; 41.89 MHz ( period = 23.872 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 11.623 ns               ;
+; N/A                                     ; 41.90 MHz ( period = 23.866 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 11.620 ns               ;
+; N/A                                     ; 41.97 MHz ( period = 23.828 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 11.653 ns               ;
+; N/A                                     ; 41.97 MHz ( period = 23.826 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[12] ; clk        ; clk      ; None                        ; None                      ; 11.652 ns               ;
+; N/A                                     ; 42.18 MHz ( period = 23.706 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 11.540 ns               ;
+; N/A                                     ; 42.23 MHz ( period = 23.680 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 11.527 ns               ;
+; N/A                                     ; 42.25 MHz ( period = 23.668 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 11.573 ns               ;
+; N/A                                     ; 42.25 MHz ( period = 23.666 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[11] ; clk        ; clk      ; None                        ; None                      ; 11.572 ns               ;
+; N/A                                     ; 42.48 MHz ( period = 23.542 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 11.510 ns               ;
+; N/A                                     ; 42.68 MHz ( period = 23.432 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 11.455 ns               ;
+; N/A                                     ; 42.74 MHz ( period = 23.398 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 11.386 ns               ;
+; N/A                                     ; 42.79 MHz ( period = 23.372 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 11.373 ns               ;
+; N/A                                     ; 42.80 MHz ( period = 23.364 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 11.421 ns               ;
+; N/A                                     ; 42.80 MHz ( period = 23.362 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 11.420 ns               ;
+; N/A                                     ; 42.93 MHz ( period = 23.292 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 11.333 ns               ;
+; N/A                                     ; 42.93 MHz ( period = 23.292 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 11.333 ns               ;
+; N/A                                     ; 42.96 MHz ( period = 23.280 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 11.327 ns               ;
+; N/A                                     ; 42.97 MHz ( period = 23.272 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 11.375 ns               ;
+; N/A                                     ; 42.98 MHz ( period = 23.264 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 11.319 ns               ;
+; N/A                                     ; 43.31 MHz ( period = 23.090 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[10] ; clk        ; clk      ; None                        ; None                      ; 11.284 ns               ;
+; N/A                                     ; 43.32 MHz ( period = 23.082 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[9]  ; clk        ; clk      ; None                        ; None                      ; 11.280 ns               ;
+; N/A                                     ; 43.32 MHz ( period = 23.082 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[8]  ; clk        ; clk      ; None                        ; None                      ; 11.280 ns               ;
+; N/A                                     ; 43.76 MHz ( period = 22.850 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 11.164 ns               ;
+; N/A                                     ; 43.78 MHz ( period = 22.842 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 11.108 ns               ;
+; N/A                                     ; 43.84 MHz ( period = 22.812 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 11.093 ns               ;
+; N/A                                     ; 43.86 MHz ( period = 22.800 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 11.139 ns               ;
+; N/A                                     ; 43.90 MHz ( period = 22.778 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 11.076 ns               ;
+; N/A                                     ; 43.94 MHz ( period = 22.756 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 11.065 ns               ;
+; N/A                                     ; 44.01 MHz ( period = 22.724 ns )                    ; controller:inst2|mac2b_sel[0] ; mac:mac2|dcfilter:inst3|addin[1]  ; clk        ; clk      ; None                        ; None                      ; 11.101 ns               ;
+; N/A                                     ; 44.28 MHz ( period = 22.586 ns )                    ; controller:inst2|mac1b_sel[0] ; mac:mac1|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 10.980 ns               ;
+; N/A                                     ; 44.38 MHz ( period = 22.534 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 10.954 ns               ;
+; N/A                                     ; 44.41 MHz ( period = 22.516 ns )                    ; controller:inst2|mac2a_sel[3] ; mac:mac2|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 10.997 ns               ;
+; N/A                                     ; 44.54 MHz ( period = 22.450 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 10.964 ns               ;
+; N/A                                     ; 44.60 MHz ( period = 22.424 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[4]  ; clk        ; clk      ; None                        ; None                      ; 10.951 ns               ;
+; N/A                                     ; 44.75 MHz ( period = 22.344 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 10.911 ns               ;
+; N/A                                     ; 44.81 MHz ( period = 22.318 ns )                    ; controller:inst2|mac1b_sel[3] ; mac:mac1|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 10.846 ns               ;
+; N/A                                     ; 44.82 MHz ( period = 22.310 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 10.842 ns               ;
+; N/A                                     ; 45.08 MHz ( period = 22.184 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 10.831 ns               ;
+; N/A                                     ; 45.15 MHz ( period = 22.150 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 10.762 ns               ;
+; N/A                                     ; 45.24 MHz ( period = 22.104 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[7]  ; clk        ; clk      ; None                        ; None                      ; 10.739 ns               ;
+; N/A                                     ; 45.26 MHz ( period = 22.096 ns )                    ; controller:inst2|mac1b_sel[2] ; mac:mac1|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 10.735 ns               ;
+; N/A                                     ; 45.53 MHz ( period = 21.962 ns )                    ; controller:inst2|mac2b_sel[3] ; mac:mac2|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 10.720 ns               ;
+; N/A                                     ; 45.57 MHz ( period = 21.944 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[6]  ; clk        ; clk      ; None                        ; None                      ; 10.659 ns               ;
+; N/A                                     ; 45.59 MHz ( period = 21.936 ns )                    ; controller:inst2|mac2b_sel[2] ; mac:mac2|dcfilter:inst3|addin[3]  ; clk        ; clk      ; None                        ; None                      ; 10.707 ns               ;
+; N/A                                     ; 45.70 MHz ( period = 21.884 ns )                    ; controller:inst2|mac2a_sel[2] ; mac:mac2|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 10.681 ns               ;
+; N/A                                     ; 45.85 MHz ( period = 21.808 ns )                    ; controller:inst2|mac1a_sel[3] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 10.591 ns               ;
+; N/A                                     ; 46.10 MHz ( period = 21.694 ns )                    ; controller:inst2|mac1a_sel[1] ; mac:mac1|dcfilter:inst3|addin[2]  ; clk        ; clk      ; None                        ; None                      ; 10.534 ns               ;
+; N/A                                     ; 46.27 MHz ( period = 21.614 ns )                    ; controller:inst2|mac2b_sel[1] ; mac:mac2|dcfilter:inst3|addin[1]  ; clk        ; clk      ; None                        ; None                      ; 10.546 ns               ;
+; N/A                                     ; 46.29 MHz ( period = 21.602 ns )                    ; controller:inst2|mac1a_sel[2] ; mac:mac1|dcfilter:inst3|addin[5]  ; clk        ; clk      ; None                        ; None                      ; 10.488 ns               ;
+; N/A                                     ; 46.31 MHz ( period = 21.594 ns )                    ; controller:inst2|mac1a_sel[0] ; mac:mac1|dcfilter:inst3|addin[1]  ; clk        ; clk      ; None                        ; None                      ; 10.484 ns               ;
+; N/A                                     ; 46.37 MHz ( period = 21.564 ns )                    ; controller:inst2|mac1b_sel[1] ; mac:mac1|dcfilter:inst3|addin[1]  ; clk        ; clk      ; None                        ; None                      ; 10.469 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                               ;                                   ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; tsu                                                                                               ;
++-------+--------------+------------+---------+------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                                       ; To Clock ;
++-------+--------------+------------+---------+------------------------------------------+----------+
+; N/A   ; None         ; 7.589 ns   ; cf_load ; controller:inst2|output_counter[5]       ; clk      ;
+; N/A   ; None         ; 7.589 ns   ; cf_load ; controller:inst2|output_counter[4]       ; clk      ;
+; N/A   ; None         ; 7.589 ns   ; cf_load ; controller:inst2|output_counter[3]       ; clk      ;
+; N/A   ; None         ; 7.589 ns   ; cf_load ; controller:inst2|output_counter[2]       ; clk      ;
+; N/A   ; None         ; 7.589 ns   ; cf_load ; controller:inst2|output_counter[1]       ; clk      ;
+; N/A   ; None         ; 7.589 ns   ; cf_load ; controller:inst2|output_counter[0]       ; clk      ;
+; N/A   ; None         ; 7.512 ns   ; din[0]  ; matrix_register:inst|reg8bit:a11|dout[0] ; clk      ;
+; N/A   ; None         ; 7.512 ns   ; din[0]  ; matrix_register:inst|reg8bit:a21|dout[0] ; clk      ;
+; N/A   ; None         ; 7.052 ns   ; din[0]  ; matrix_register:inst|reg8bit:a22|dout[0] ; clk      ;
+; N/A   ; None         ; 7.051 ns   ; din[0]  ; matrix_register:inst|reg8bit:a23|dout[0] ; clk      ;
+; N/A   ; None         ; 6.990 ns   ; din[0]  ; matrix_register:inst|reg8bit:a12|dout[0] ; clk      ;
+; N/A   ; None         ; 6.989 ns   ; din[0]  ; matrix_register:inst|reg8bit:a31|dout[0] ; clk      ;
+; N/A   ; None         ; 6.977 ns   ; din[0]  ; matrix_register:inst|reg8bit:a14|dout[0] ; clk      ;
+; N/A   ; None         ; 6.976 ns   ; din[0]  ; matrix_register:inst|reg8bit:a33|dout[0] ; clk      ;
+; N/A   ; None         ; 6.715 ns   ; din[0]  ; matrix_register:inst|reg8bit:a32|dout[0] ; clk      ;
+; N/A   ; None         ; 6.713 ns   ; din[0]  ; matrix_register:inst|reg8bit:a13|dout[0] ; clk      ;
+; N/A   ; None         ; 6.691 ns   ; din[1]  ; matrix_register:inst|reg8bit:a13|dout[1] ; clk      ;
+; N/A   ; None         ; 6.689 ns   ; din[1]  ; matrix_register:inst|reg8bit:a32|dout[1] ; clk      ;
+; N/A   ; None         ; 6.380 ns   ; din[3]  ; matrix_register:inst|reg8bit:a14|dout[3] ; clk      ;
+; N/A   ; None         ; 6.380 ns   ; din[3]  ; matrix_register:inst|reg8bit:a34|dout[3] ; clk      ;
+; N/A   ; None         ; 6.275 ns   ; din[7]  ; matrix_register:inst|reg8bit:a14|dout[7] ; clk      ;
+; N/A   ; None         ; 6.273 ns   ; din[7]  ; matrix_register:inst|reg8bit:a33|dout[7] ; clk      ;
+; N/A   ; None         ; 6.216 ns   ; din[3]  ; matrix_register:inst|reg8bit:a23|dout[3] ; clk      ;
+; N/A   ; None         ; 6.180 ns   ; din[2]  ; matrix_register:inst|reg8bit:a21|dout[2] ; clk      ;
+; N/A   ; None         ; 6.179 ns   ; din[2]  ; matrix_register:inst|reg8bit:a31|dout[2] ; clk      ;
+; N/A   ; None         ; 6.150 ns   ; din[7]  ; matrix_register:inst|reg8bit:a11|dout[7] ; clk      ;
+; N/A   ; None         ; 6.147 ns   ; din[7]  ; matrix_register:inst|reg8bit:a21|dout[7] ; clk      ;
+; N/A   ; None         ; 6.025 ns   ; din[7]  ; matrix_register:inst|reg8bit:a34|dout[7] ; clk      ;
+; N/A   ; None         ; 5.966 ns   ; din[0]  ; matrix_register:inst|reg8bit:a24|dout[0] ; clk      ;
+; N/A   ; None         ; 5.963 ns   ; din[0]  ; matrix_register:inst|reg8bit:a34|dout[0] ; clk      ;
+; N/A   ; None         ; 5.961 ns   ; din[2]  ; matrix_register:inst|reg8bit:a14|dout[2] ; clk      ;
+; N/A   ; None         ; 5.960 ns   ; din[2]  ; matrix_register:inst|reg8bit:a34|dout[2] ; clk      ;
+; N/A   ; None         ; 5.886 ns   ; din[7]  ; matrix_register:inst|reg8bit:a22|dout[7] ; clk      ;
+; N/A   ; None         ; 5.885 ns   ; din[7]  ; matrix_register:inst|reg8bit:a23|dout[7] ; clk      ;
+; N/A   ; None         ; 5.872 ns   ; din[3]  ; matrix_register:inst|reg8bit:a33|dout[3] ; clk      ;
+; N/A   ; None         ; 5.870 ns   ; din[3]  ; matrix_register:inst|reg8bit:a24|dout[3] ; clk      ;
+; N/A   ; None         ; 5.867 ns   ; din[1]  ; matrix_register:inst|reg8bit:a31|dout[1] ; clk      ;
+; N/A   ; None         ; 5.865 ns   ; din[3]  ; matrix_register:inst|reg8bit:a32|dout[3] ; clk      ;
+; N/A   ; None         ; 5.864 ns   ; din[3]  ; matrix_register:inst|reg8bit:a13|dout[3] ; clk      ;
+; N/A   ; None         ; 5.857 ns   ; din[1]  ; matrix_register:inst|reg8bit:a21|dout[1] ; clk      ;
+; N/A   ; None         ; 5.850 ns   ; din[7]  ; matrix_register:inst|reg8bit:a31|dout[7] ; clk      ;
+; N/A   ; None         ; 5.848 ns   ; din[7]  ; matrix_register:inst|reg8bit:a12|dout[7] ; clk      ;
+; N/A   ; None         ; 5.832 ns   ; din[2]  ; matrix_register:inst|reg8bit:a12|dout[2] ; clk      ;
+; N/A   ; None         ; 5.830 ns   ; din[2]  ; matrix_register:inst|reg8bit:a23|dout[2] ; clk      ;
+; N/A   ; None         ; 5.827 ns   ; din[2]  ; matrix_register:inst|reg8bit:a24|dout[2] ; clk      ;
+; N/A   ; None         ; 5.827 ns   ; din[2]  ; matrix_register:inst|reg8bit:a33|dout[2] ; clk      ;
+; N/A   ; None         ; 5.819 ns   ; din[1]  ; matrix_register:inst|reg8bit:a14|dout[1] ; clk      ;
+; N/A   ; None         ; 5.778 ns   ; din[3]  ; matrix_register:inst|reg8bit:a22|dout[3] ; clk      ;
+; N/A   ; None         ; 5.763 ns   ; din[2]  ; matrix_register:inst|reg8bit:a11|dout[2] ; clk      ;
+; N/A   ; None         ; 5.748 ns   ; din[5]  ; matrix_register:inst|reg8bit:a33|dout[5] ; clk      ;
+; N/A   ; None         ; 5.746 ns   ; din[5]  ; matrix_register:inst|reg8bit:a24|dout[5] ; clk      ;
+; N/A   ; None         ; 5.724 ns   ; din[5]  ; matrix_register:inst|reg8bit:a11|dout[5] ; clk      ;
+; N/A   ; None         ; 5.722 ns   ; din[5]  ; matrix_register:inst|reg8bit:a12|dout[5] ; clk      ;
+; N/A   ; None         ; 5.458 ns   ; din[2]  ; matrix_register:inst|reg8bit:a22|dout[2] ; clk      ;
+; N/A   ; None         ; 5.452 ns   ; din[1]  ; matrix_register:inst|reg8bit:a11|dout[1] ; clk      ;
+; N/A   ; None         ; 5.450 ns   ; din[1]  ; matrix_register:inst|reg8bit:a34|dout[1] ; clk      ;
+; N/A   ; None         ; 5.435 ns   ; din[4]  ; matrix_register:inst|reg8bit:a12|dout[4] ; clk      ;
+; N/A   ; None         ; 5.435 ns   ; din[4]  ; matrix_register:inst|reg8bit:a23|dout[4] ; clk      ;
+; N/A   ; None         ; 5.430 ns   ; din[4]  ; matrix_register:inst|reg8bit:a14|dout[4] ; clk      ;
+; N/A   ; None         ; 5.429 ns   ; din[4]  ; matrix_register:inst|reg8bit:a34|dout[4] ; clk      ;
+; N/A   ; None         ; 5.425 ns   ; din[3]  ; matrix_register:inst|reg8bit:a12|dout[3] ; clk      ;
+; N/A   ; None         ; 5.424 ns   ; din[3]  ; matrix_register:inst|reg8bit:a11|dout[3] ; clk      ;
+; N/A   ; None         ; 5.412 ns   ; din[4]  ; matrix_register:inst|reg8bit:a11|dout[4] ; clk      ;
+; N/A   ; None         ; 5.398 ns   ; din[7]  ; matrix_register:inst|reg8bit:a32|dout[7] ; clk      ;
+; N/A   ; None         ; 5.394 ns   ; din[7]  ; matrix_register:inst|reg8bit:a13|dout[7] ; clk      ;
+; N/A   ; None         ; 5.336 ns   ; din[1]  ; matrix_register:inst|reg8bit:a33|dout[1] ; clk      ;
+; N/A   ; None         ; 5.336 ns   ; din[1]  ; matrix_register:inst|reg8bit:a24|dout[1] ; clk      ;
+; N/A   ; None         ; 5.331 ns   ; din[4]  ; matrix_register:inst|reg8bit:a21|dout[4] ; clk      ;
+; N/A   ; None         ; 5.330 ns   ; din[4]  ; matrix_register:inst|reg8bit:a31|dout[4] ; clk      ;
+; N/A   ; None         ; 5.307 ns   ; cf_load ; controller:inst2|output_counter_run      ; clk      ;
+; N/A   ; None         ; 5.290 ns   ; din[5]  ; matrix_register:inst|reg8bit:a14|dout[5] ; clk      ;
+; N/A   ; None         ; 5.133 ns   ; din[4]  ; matrix_register:inst|reg8bit:a33|dout[4] ; clk      ;
+; N/A   ; None         ; 5.132 ns   ; din[4]  ; matrix_register:inst|reg8bit:a24|dout[4] ; clk      ;
+; N/A   ; None         ; 5.073 ns   ; din[4]  ; matrix_register:inst|reg8bit:a32|dout[4] ; clk      ;
+; N/A   ; None         ; 5.071 ns   ; din[4]  ; matrix_register:inst|reg8bit:a13|dout[4] ; clk      ;
+; N/A   ; None         ; 5.048 ns   ; din[2]  ; matrix_register:inst|reg8bit:a32|dout[2] ; clk      ;
+; N/A   ; None         ; 5.047 ns   ; din[2]  ; matrix_register:inst|reg8bit:a13|dout[2] ; clk      ;
+; N/A   ; None         ; 5.030 ns   ; din[1]  ; matrix_register:inst|reg8bit:a22|dout[1] ; clk      ;
+; N/A   ; None         ; 5.026 ns   ; din[1]  ; matrix_register:inst|reg8bit:a23|dout[1] ; clk      ;
+; N/A   ; None         ; 5.024 ns   ; din[1]  ; matrix_register:inst|reg8bit:a12|dout[1] ; clk      ;
+; N/A   ; None         ; 4.983 ns   ; din[3]  ; matrix_register:inst|reg8bit:a31|dout[3] ; clk      ;
+; N/A   ; None         ; 4.981 ns   ; din[3]  ; matrix_register:inst|reg8bit:a21|dout[3] ; clk      ;
+; N/A   ; None         ; 4.967 ns   ; din[7]  ; matrix_register:inst|reg8bit:a24|dout[7] ; clk      ;
+; N/A   ; None         ; 4.949 ns   ; din[5]  ; matrix_register:inst|reg8bit:a34|dout[5] ; clk      ;
+; N/A   ; None         ; 4.640 ns   ; din[4]  ; matrix_register:inst|reg8bit:a22|dout[4] ; clk      ;
+; N/A   ; None         ; 4.593 ns   ; din[5]  ; matrix_register:inst|reg8bit:a32|dout[5] ; clk      ;
+; N/A   ; None         ; 4.592 ns   ; din[5]  ; matrix_register:inst|reg8bit:a13|dout[5] ; clk      ;
+; N/A   ; None         ; 4.455 ns   ; din[6]  ; matrix_register:inst|reg8bit:a31|dout[6] ; clk      ;
+; N/A   ; None         ; 4.455 ns   ; din[6]  ; matrix_register:inst|reg8bit:a12|dout[6] ; clk      ;
+; N/A   ; None         ; 4.329 ns   ; din[6]  ; matrix_register:inst|reg8bit:a13|dout[6] ; clk      ;
+; N/A   ; None         ; 4.328 ns   ; din[6]  ; matrix_register:inst|reg8bit:a32|dout[6] ; clk      ;
+; N/A   ; None         ; 4.318 ns   ; din[6]  ; matrix_register:inst|reg8bit:a11|dout[6] ; clk      ;
+; N/A   ; None         ; 4.318 ns   ; din[6]  ; matrix_register:inst|reg8bit:a21|dout[6] ; clk      ;
+; N/A   ; None         ; 4.273 ns   ; din[5]  ; matrix_register:inst|reg8bit:a23|dout[5] ; clk      ;
+; N/A   ; None         ; 4.272 ns   ; din[5]  ; matrix_register:inst|reg8bit:a22|dout[5] ; clk      ;
+; N/A   ; None         ; 4.262 ns   ; din[5]  ; matrix_register:inst|reg8bit:a31|dout[5] ; clk      ;
+; N/A   ; None         ; 4.258 ns   ; din[5]  ; matrix_register:inst|reg8bit:a21|dout[5] ; clk      ;
+; N/A   ; None         ; 4.054 ns   ; din[6]  ; matrix_register:inst|reg8bit:a23|dout[6] ; clk      ;
+; N/A   ; None         ; 4.053 ns   ; din[6]  ; matrix_register:inst|reg8bit:a22|dout[6] ; clk      ;
+; N/A   ; None         ; 4.026 ns   ; din[6]  ; matrix_register:inst|reg8bit:a24|dout[6] ; clk      ;
+; N/A   ; None         ; 4.024 ns   ; din[6]  ; matrix_register:inst|reg8bit:a33|dout[6] ; clk      ;
+; N/A   ; None         ; 4.007 ns   ; din[6]  ; matrix_register:inst|reg8bit:a34|dout[6] ; clk      ;
+; N/A   ; None         ; 4.006 ns   ; din[6]  ; matrix_register:inst|reg8bit:a14|dout[6] ; clk      ;
++-------+--------------+------------+---------+------------------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                           ;
++-------+--------------+------------+------------------------------------------+-------------------+------------+
+; Slack ; Required tco ; Actual tco ; From                                     ; To                ; From Clock ;
++-------+--------------+------------+------------------------------------------+-------------------+------------+
+; N/A   ; None         ; 8.894 ns   ; mac:mac1|feedback_gate:inst1|dout[1]     ; mac1out[1]        ; clk        ;
+; N/A   ; None         ; 8.887 ns   ; controller:inst2|counter[3]              ; counter[3]        ; clk        ;
+; N/A   ; None         ; 8.661 ns   ; output_register:inst1|dout[13]           ; dout[13]          ; clk        ;
+; N/A   ; None         ; 8.500 ns   ; controller:inst2|counter[1]              ; counter[1]        ; clk        ;
+; N/A   ; None         ; 8.493 ns   ; controller:inst2|counter[5]              ; counter[5]        ; clk        ;
+; N/A   ; None         ; 8.430 ns   ; controller:inst2|counter[4]              ; counter[4]        ; clk        ;
+; N/A   ; None         ; 8.395 ns   ; from_pos_half_cycle_buffer:inst3|dout[1] ; mac1_sel[1]       ; clk        ;
+; N/A   ; None         ; 8.392 ns   ; output_register:inst1|dout[2]            ; dout[2]           ; clk        ;
+; N/A   ; None         ; 8.375 ns   ; output_register:inst1|dout[0]            ; dout[0]           ; clk        ;
+; N/A   ; None         ; 8.360 ns   ; mac:mac1|feedback_gate:inst1|dout[5]     ; mac1out[5]        ; clk        ;
+; N/A   ; None         ; 8.357 ns   ; controller:inst2|output_counter[4]       ; output_counter[4] ; clk        ;
+; N/A   ; None         ; 8.338 ns   ; output_register:inst1|dout[11]           ; dout[11]          ; clk        ;
+; N/A   ; None         ; 8.289 ns   ; output_register:inst1|dout[3]            ; dout[3]           ; clk        ;
+; N/A   ; None         ; 8.206 ns   ; controller:inst2|output_counter[3]       ; output_counter[3] ; clk        ;
+; N/A   ; None         ; 8.178 ns   ; output_register:inst1|dout[9]            ; dout[9]           ; clk        ;
+; N/A   ; None         ; 8.129 ns   ; output_register:inst1|dout[7]            ; dout[7]           ; clk        ;
+; N/A   ; None         ; 8.127 ns   ; output_register:inst1|dout[15]           ; dout[15]          ; clk        ;
+; N/A   ; None         ; 8.114 ns   ; mac:mac1|feedback_gate:inst1|dout[11]    ; mac1out[11]       ; clk        ;
+; N/A   ; None         ; 8.083 ns   ; mac:mac1|feedback_gate:inst1|dout[3]     ; mac1out[3]        ; clk        ;
+; N/A   ; None         ; 8.064 ns   ; controller:inst2|counter[2]              ; counter[2]        ; clk        ;
+; N/A   ; None         ; 8.054 ns   ; output_register:inst1|dout[10]           ; dout[10]          ; clk        ;
+; N/A   ; None         ; 8.017 ns   ; mac:mac1|feedback_gate:inst1|dout[6]     ; mac1out[6]        ; clk        ;
+; N/A   ; None         ; 8.005 ns   ; output_register:inst1|dout[6]            ; dout[6]           ; clk        ;
+; N/A   ; None         ; 7.959 ns   ; output_register:inst1|dout[1]            ; dout[1]           ; clk        ;
+; N/A   ; None         ; 7.930 ns   ; from_pos_half_cycle_buffer:inst3|dout[2] ; mac1_sel[2]       ; clk        ;
+; N/A   ; None         ; 7.920 ns   ; mac:mac1|feedback_gate:inst1|dout[0]     ; mac1out[0]        ; clk        ;
+; N/A   ; None         ; 7.911 ns   ; output_register:inst1|dout[12]           ; dout[12]          ; clk        ;
+; N/A   ; None         ; 7.726 ns   ; mac:mac1|feedback_gate:inst1|dout[10]    ; mac1out[10]       ; clk        ;
+; N/A   ; None         ; 7.687 ns   ; mac:mac1|feedback_gate:inst1|dout[9]     ; mac1out[9]        ; clk        ;
+; N/A   ; None         ; 7.667 ns   ; mac:mac1|feedback_gate:inst1|dout[4]     ; mac1out[4]        ; clk        ;
+; N/A   ; None         ; 7.656 ns   ; mac:mac1|feedback_gate:inst1|dout[14]    ; mac1out[14]       ; clk        ;
+; N/A   ; None         ; 7.640 ns   ; output_register:inst1|dout[8]            ; dout[8]           ; clk        ;
+; N/A   ; None         ; 7.586 ns   ; from_pos_half_cycle_buffer:inst3|dout[0] ; mac1_sel[0]       ; clk        ;
+; N/A   ; None         ; 7.582 ns   ; mac:mac1|feedback_gate:inst1|dout[8]     ; mac1out[8]        ; clk        ;
+; N/A   ; None         ; 7.579 ns   ; output_register:inst1|dout[14]           ; dout[14]          ; clk        ;
+; N/A   ; None         ; 7.555 ns   ; output_register:inst1|dout[5]            ; dout[5]           ; clk        ;
+; N/A   ; None         ; 7.507 ns   ; controller:inst2|output_counter[5]       ; output_counter[5] ; clk        ;
+; N/A   ; None         ; 7.365 ns   ; mac:mac1|feedback_gate:inst1|dout[2]     ; mac1out[2]        ; clk        ;
+; N/A   ; None         ; 7.317 ns   ; mac:mac1|feedback_gate:inst1|dout[7]     ; mac1out[7]        ; clk        ;
+; N/A   ; None         ; 7.297 ns   ; output_register:inst1|dout[4]            ; dout[4]           ; clk        ;
+; N/A   ; None         ; 7.282 ns   ; controller:inst2|output_counter[2]       ; output_counter[2] ; clk        ;
+; N/A   ; None         ; 6.933 ns   ; mac:mac1|feedback_gate:inst1|dout[15]    ; mac1out[15]       ; clk        ;
+; N/A   ; None         ; 6.899 ns   ; mac:mac1|feedback_gate:inst1|dout[13]    ; mac1out[13]       ; clk        ;
+; N/A   ; None         ; 6.844 ns   ; controller:inst2|counter[0]              ; counter[0]        ; clk        ;
+; N/A   ; None         ; 6.808 ns   ; controller:inst2|output_counter[1]       ; output_counter[1] ; clk        ;
+; N/A   ; None         ; 6.562 ns   ; mac:mac1|feedback_gate:inst1|dout[12]    ; mac1out[12]       ; clk        ;
+; N/A   ; None         ; 6.484 ns   ; controller:inst2|output_counter[0]       ; output_counter[0] ; clk        ;
++-------+--------------+------------+------------------------------------------+-------------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; th                                                                                                      ;
++---------------+-------------+-----------+---------+------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                                       ; To Clock ;
++---------------+-------------+-----------+---------+------------------------------------------+----------+
+; N/A           ; None        ; -3.954 ns ; din[6]  ; matrix_register:inst|reg8bit:a14|dout[6] ; clk      ;
+; N/A           ; None        ; -3.955 ns ; din[6]  ; matrix_register:inst|reg8bit:a34|dout[6] ; clk      ;
+; N/A           ; None        ; -3.972 ns ; din[6]  ; matrix_register:inst|reg8bit:a33|dout[6] ; clk      ;
+; N/A           ; None        ; -3.974 ns ; din[6]  ; matrix_register:inst|reg8bit:a24|dout[6] ; clk      ;
+; N/A           ; None        ; -4.001 ns ; din[6]  ; matrix_register:inst|reg8bit:a22|dout[6] ; clk      ;
+; N/A           ; None        ; -4.002 ns ; din[6]  ; matrix_register:inst|reg8bit:a23|dout[6] ; clk      ;
+; N/A           ; None        ; -4.206 ns ; din[5]  ; matrix_register:inst|reg8bit:a21|dout[5] ; clk      ;
+; N/A           ; None        ; -4.210 ns ; din[5]  ; matrix_register:inst|reg8bit:a31|dout[5] ; clk      ;
+; N/A           ; None        ; -4.220 ns ; din[5]  ; matrix_register:inst|reg8bit:a22|dout[5] ; clk      ;
+; N/A           ; None        ; -4.221 ns ; din[5]  ; matrix_register:inst|reg8bit:a23|dout[5] ; clk      ;
+; N/A           ; None        ; -4.266 ns ; din[6]  ; matrix_register:inst|reg8bit:a11|dout[6] ; clk      ;
+; N/A           ; None        ; -4.266 ns ; din[6]  ; matrix_register:inst|reg8bit:a21|dout[6] ; clk      ;
+; N/A           ; None        ; -4.276 ns ; din[6]  ; matrix_register:inst|reg8bit:a32|dout[6] ; clk      ;
+; N/A           ; None        ; -4.277 ns ; din[6]  ; matrix_register:inst|reg8bit:a13|dout[6] ; clk      ;
+; N/A           ; None        ; -4.403 ns ; din[6]  ; matrix_register:inst|reg8bit:a31|dout[6] ; clk      ;
+; N/A           ; None        ; -4.403 ns ; din[6]  ; matrix_register:inst|reg8bit:a12|dout[6] ; clk      ;
+; N/A           ; None        ; -4.540 ns ; din[5]  ; matrix_register:inst|reg8bit:a13|dout[5] ; clk      ;
+; N/A           ; None        ; -4.541 ns ; din[5]  ; matrix_register:inst|reg8bit:a32|dout[5] ; clk      ;
+; N/A           ; None        ; -4.588 ns ; din[4]  ; matrix_register:inst|reg8bit:a22|dout[4] ; clk      ;
+; N/A           ; None        ; -4.897 ns ; din[5]  ; matrix_register:inst|reg8bit:a34|dout[5] ; clk      ;
+; N/A           ; None        ; -4.915 ns ; din[7]  ; matrix_register:inst|reg8bit:a24|dout[7] ; clk      ;
+; N/A           ; None        ; -4.929 ns ; din[3]  ; matrix_register:inst|reg8bit:a21|dout[3] ; clk      ;
+; N/A           ; None        ; -4.931 ns ; din[3]  ; matrix_register:inst|reg8bit:a31|dout[3] ; clk      ;
+; N/A           ; None        ; -4.972 ns ; din[1]  ; matrix_register:inst|reg8bit:a12|dout[1] ; clk      ;
+; N/A           ; None        ; -4.974 ns ; din[1]  ; matrix_register:inst|reg8bit:a23|dout[1] ; clk      ;
+; N/A           ; None        ; -4.978 ns ; din[1]  ; matrix_register:inst|reg8bit:a22|dout[1] ; clk      ;
+; N/A           ; None        ; -4.995 ns ; din[2]  ; matrix_register:inst|reg8bit:a13|dout[2] ; clk      ;
+; N/A           ; None        ; -4.996 ns ; din[2]  ; matrix_register:inst|reg8bit:a32|dout[2] ; clk      ;
+; N/A           ; None        ; -5.019 ns ; din[4]  ; matrix_register:inst|reg8bit:a13|dout[4] ; clk      ;
+; N/A           ; None        ; -5.021 ns ; din[4]  ; matrix_register:inst|reg8bit:a32|dout[4] ; clk      ;
+; N/A           ; None        ; -5.080 ns ; din[4]  ; matrix_register:inst|reg8bit:a24|dout[4] ; clk      ;
+; N/A           ; None        ; -5.081 ns ; din[4]  ; matrix_register:inst|reg8bit:a33|dout[4] ; clk      ;
+; N/A           ; None        ; -5.238 ns ; din[5]  ; matrix_register:inst|reg8bit:a14|dout[5] ; clk      ;
+; N/A           ; None        ; -5.255 ns ; cf_load ; controller:inst2|output_counter_run      ; clk      ;
+; N/A           ; None        ; -5.278 ns ; din[4]  ; matrix_register:inst|reg8bit:a31|dout[4] ; clk      ;
+; N/A           ; None        ; -5.279 ns ; din[4]  ; matrix_register:inst|reg8bit:a21|dout[4] ; clk      ;
+; N/A           ; None        ; -5.284 ns ; din[1]  ; matrix_register:inst|reg8bit:a33|dout[1] ; clk      ;
+; N/A           ; None        ; -5.284 ns ; din[1]  ; matrix_register:inst|reg8bit:a24|dout[1] ; clk      ;
+; N/A           ; None        ; -5.342 ns ; din[7]  ; matrix_register:inst|reg8bit:a13|dout[7] ; clk      ;
+; N/A           ; None        ; -5.346 ns ; din[7]  ; matrix_register:inst|reg8bit:a32|dout[7] ; clk      ;
+; N/A           ; None        ; -5.360 ns ; din[4]  ; matrix_register:inst|reg8bit:a11|dout[4] ; clk      ;
+; N/A           ; None        ; -5.372 ns ; din[3]  ; matrix_register:inst|reg8bit:a11|dout[3] ; clk      ;
+; N/A           ; None        ; -5.373 ns ; din[3]  ; matrix_register:inst|reg8bit:a12|dout[3] ; clk      ;
+; N/A           ; None        ; -5.377 ns ; din[4]  ; matrix_register:inst|reg8bit:a34|dout[4] ; clk      ;
+; N/A           ; None        ; -5.378 ns ; din[4]  ; matrix_register:inst|reg8bit:a14|dout[4] ; clk      ;
+; N/A           ; None        ; -5.383 ns ; din[4]  ; matrix_register:inst|reg8bit:a12|dout[4] ; clk      ;
+; N/A           ; None        ; -5.383 ns ; din[4]  ; matrix_register:inst|reg8bit:a23|dout[4] ; clk      ;
+; N/A           ; None        ; -5.398 ns ; din[1]  ; matrix_register:inst|reg8bit:a34|dout[1] ; clk      ;
+; N/A           ; None        ; -5.400 ns ; din[1]  ; matrix_register:inst|reg8bit:a11|dout[1] ; clk      ;
+; N/A           ; None        ; -5.406 ns ; din[2]  ; matrix_register:inst|reg8bit:a22|dout[2] ; clk      ;
+; N/A           ; None        ; -5.670 ns ; din[5]  ; matrix_register:inst|reg8bit:a12|dout[5] ; clk      ;
+; N/A           ; None        ; -5.672 ns ; din[5]  ; matrix_register:inst|reg8bit:a11|dout[5] ; clk      ;
+; N/A           ; None        ; -5.694 ns ; din[5]  ; matrix_register:inst|reg8bit:a24|dout[5] ; clk      ;
+; N/A           ; None        ; -5.696 ns ; din[5]  ; matrix_register:inst|reg8bit:a33|dout[5] ; clk      ;
+; N/A           ; None        ; -5.711 ns ; din[2]  ; matrix_register:inst|reg8bit:a11|dout[2] ; clk      ;
+; N/A           ; None        ; -5.726 ns ; din[3]  ; matrix_register:inst|reg8bit:a22|dout[3] ; clk      ;
+; N/A           ; None        ; -5.767 ns ; din[1]  ; matrix_register:inst|reg8bit:a14|dout[1] ; clk      ;
+; N/A           ; None        ; -5.775 ns ; din[2]  ; matrix_register:inst|reg8bit:a24|dout[2] ; clk      ;
+; N/A           ; None        ; -5.775 ns ; din[2]  ; matrix_register:inst|reg8bit:a33|dout[2] ; clk      ;
+; N/A           ; None        ; -5.778 ns ; din[2]  ; matrix_register:inst|reg8bit:a23|dout[2] ; clk      ;
+; N/A           ; None        ; -5.780 ns ; din[2]  ; matrix_register:inst|reg8bit:a12|dout[2] ; clk      ;
+; N/A           ; None        ; -5.796 ns ; din[7]  ; matrix_register:inst|reg8bit:a12|dout[7] ; clk      ;
+; N/A           ; None        ; -5.798 ns ; din[7]  ; matrix_register:inst|reg8bit:a31|dout[7] ; clk      ;
+; N/A           ; None        ; -5.805 ns ; din[1]  ; matrix_register:inst|reg8bit:a21|dout[1] ; clk      ;
+; N/A           ; None        ; -5.812 ns ; din[3]  ; matrix_register:inst|reg8bit:a13|dout[3] ; clk      ;
+; N/A           ; None        ; -5.813 ns ; din[3]  ; matrix_register:inst|reg8bit:a32|dout[3] ; clk      ;
+; N/A           ; None        ; -5.815 ns ; din[1]  ; matrix_register:inst|reg8bit:a31|dout[1] ; clk      ;
+; N/A           ; None        ; -5.818 ns ; din[3]  ; matrix_register:inst|reg8bit:a24|dout[3] ; clk      ;
+; N/A           ; None        ; -5.820 ns ; din[3]  ; matrix_register:inst|reg8bit:a33|dout[3] ; clk      ;
+; N/A           ; None        ; -5.833 ns ; din[7]  ; matrix_register:inst|reg8bit:a23|dout[7] ; clk      ;
+; N/A           ; None        ; -5.834 ns ; din[7]  ; matrix_register:inst|reg8bit:a22|dout[7] ; clk      ;
+; N/A           ; None        ; -5.908 ns ; din[2]  ; matrix_register:inst|reg8bit:a34|dout[2] ; clk      ;
+; N/A           ; None        ; -5.909 ns ; din[2]  ; matrix_register:inst|reg8bit:a14|dout[2] ; clk      ;
+; N/A           ; None        ; -5.911 ns ; din[0]  ; matrix_register:inst|reg8bit:a34|dout[0] ; clk      ;
+; N/A           ; None        ; -5.914 ns ; din[0]  ; matrix_register:inst|reg8bit:a24|dout[0] ; clk      ;
+; N/A           ; None        ; -5.973 ns ; din[7]  ; matrix_register:inst|reg8bit:a34|dout[7] ; clk      ;
+; N/A           ; None        ; -6.095 ns ; din[7]  ; matrix_register:inst|reg8bit:a21|dout[7] ; clk      ;
+; N/A           ; None        ; -6.098 ns ; din[7]  ; matrix_register:inst|reg8bit:a11|dout[7] ; clk      ;
+; N/A           ; None        ; -6.127 ns ; din[2]  ; matrix_register:inst|reg8bit:a31|dout[2] ; clk      ;
+; N/A           ; None        ; -6.128 ns ; din[2]  ; matrix_register:inst|reg8bit:a21|dout[2] ; clk      ;
+; N/A           ; None        ; -6.164 ns ; din[3]  ; matrix_register:inst|reg8bit:a23|dout[3] ; clk      ;
+; N/A           ; None        ; -6.221 ns ; din[7]  ; matrix_register:inst|reg8bit:a33|dout[7] ; clk      ;
+; N/A           ; None        ; -6.223 ns ; din[7]  ; matrix_register:inst|reg8bit:a14|dout[7] ; clk      ;
+; N/A           ; None        ; -6.328 ns ; din[3]  ; matrix_register:inst|reg8bit:a14|dout[3] ; clk      ;
+; N/A           ; None        ; -6.328 ns ; din[3]  ; matrix_register:inst|reg8bit:a34|dout[3] ; clk      ;
+; N/A           ; None        ; -6.637 ns ; din[1]  ; matrix_register:inst|reg8bit:a32|dout[1] ; clk      ;
+; N/A           ; None        ; -6.639 ns ; din[1]  ; matrix_register:inst|reg8bit:a13|dout[1] ; clk      ;
+; N/A           ; None        ; -6.661 ns ; din[0]  ; matrix_register:inst|reg8bit:a13|dout[0] ; clk      ;
+; N/A           ; None        ; -6.663 ns ; din[0]  ; matrix_register:inst|reg8bit:a32|dout[0] ; clk      ;
+; N/A           ; None        ; -6.924 ns ; din[0]  ; matrix_register:inst|reg8bit:a33|dout[0] ; clk      ;
+; N/A           ; None        ; -6.925 ns ; din[0]  ; matrix_register:inst|reg8bit:a14|dout[0] ; clk      ;
+; N/A           ; None        ; -6.937 ns ; din[0]  ; matrix_register:inst|reg8bit:a31|dout[0] ; clk      ;
+; N/A           ; None        ; -6.938 ns ; din[0]  ; matrix_register:inst|reg8bit:a12|dout[0] ; clk      ;
+; N/A           ; None        ; -6.999 ns ; din[0]  ; matrix_register:inst|reg8bit:a23|dout[0] ; clk      ;
+; N/A           ; None        ; -7.000 ns ; din[0]  ; matrix_register:inst|reg8bit:a22|dout[0] ; clk      ;
+; N/A           ; None        ; -7.460 ns ; din[0]  ; matrix_register:inst|reg8bit:a11|dout[0] ; clk      ;
+; N/A           ; None        ; -7.460 ns ; din[0]  ; matrix_register:inst|reg8bit:a21|dout[0] ; clk      ;
+; N/A           ; None        ; -7.537 ns ; cf_load ; controller:inst2|output_counter[5]       ; clk      ;
+; N/A           ; None        ; -7.537 ns ; cf_load ; controller:inst2|output_counter[4]       ; clk      ;
+; N/A           ; None        ; -7.537 ns ; cf_load ; controller:inst2|output_counter[3]       ; clk      ;
+; N/A           ; None        ; -7.537 ns ; cf_load ; controller:inst2|output_counter[2]       ; clk      ;
+; N/A           ; None        ; -7.537 ns ; cf_load ; controller:inst2|output_counter[1]       ; clk      ;
+; N/A           ; None        ; -7.537 ns ; cf_load ; controller:inst2|output_counter[0]       ; clk      ;
++---------------+-------------+-----------+---------+------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Dec 05 14:20:28 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off transmult -c transmult --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 30.36 MHz between source register "controller:inst2|mac1b_sel[1]" and destination register "mac:mac1|dcfilter:inst3|addin[15]" (period= 32.938 ns)
+    Info: + Longest register to register delay is 16.156 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X17_Y10_N4; Fanout = 44; REG Node = 'controller:inst2|mac1b_sel[1]'
+        Info: 2: + IC(2.246 ns) + CELL(0.114 ns) = 2.360 ns; Loc. = LC_X15_Y8_N2; Fanout = 1; COMB Node = 'mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component|mux_ugc:auto_generated|result_node[1]~17'
+        Info: 3: + IC(1.079 ns) + CELL(0.442 ns) = 3.881 ns; Loc. = LC_X15_Y8_N3; Fanout = 4; COMB Node = 'mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component|mux_ugc:auto_generated|result_node[1]~18'
+        Info: 4: + IC(1.280 ns) + CELL(0.292 ns) = 5.453 ns; Loc. = LC_X12_Y8_N7; Fanout = 2; COMB Node = 'mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component|mux_ugc:auto_generated|result_node[1]~47'
+        Info: 5: + IC(0.431 ns) + CELL(0.575 ns) = 6.459 ns; Loc. = LC_X12_Y8_N0; Fanout = 2; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|cs2a[0]~COUTCOUT1_13'
+        Info: 6: + IC(0.000 ns) + CELL(0.608 ns) = 7.067 ns; Loc. = LC_X12_Y8_N1; Fanout = 9; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|cs2a[1]'
+        Info: 7: + IC(1.314 ns) + CELL(0.292 ns) = 8.673 ns; Loc. = LC_X11_Y7_N9; Fanout = 3; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|le4a[5]'
+        Info: 8: + IC(1.079 ns) + CELL(0.423 ns) = 10.175 ns; Loc. = LC_X11_Y7_N1; Fanout = 2; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|add20_result[0]~32'
+        Info: 9: + IC(0.000 ns) + CELL(0.078 ns) = 10.253 ns; Loc. = LC_X11_Y7_N2; Fanout = 2; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|add20_result[1]~27'
+        Info: 10: + IC(0.000 ns) + CELL(0.078 ns) = 10.331 ns; Loc. = LC_X11_Y7_N3; Fanout = 2; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|add20_result[2]~22'
+        Info: 11: + IC(0.000 ns) + CELL(0.178 ns) = 10.509 ns; Loc. = LC_X11_Y7_N4; Fanout = 3; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|add20_result[3]~17'
+        Info: 12: + IC(0.000 ns) + CELL(0.621 ns) = 11.130 ns; Loc. = LC_X11_Y7_N7; Fanout = 3; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|add20_result[6]~0'
+        Info: 13: + IC(1.259 ns) + CELL(0.575 ns) = 12.964 ns; Loc. = LC_X11_Y5_N3; Fanout = 2; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|op_2~12COUT1_84'
+        Info: 14: + IC(0.000 ns) + CELL(0.608 ns) = 13.572 ns; Loc. = LC_X11_Y5_N4; Fanout = 3; COMB Node = 'mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated|op_2~5'
+        Info: 15: + IC(1.222 ns) + CELL(0.575 ns) = 15.369 ns; Loc. = LC_X12_Y3_N6; Fanout = 1; COMB Node = 'mac:mac1|dcfilter:inst3|addin[14]~3COUT1_68'
+        Info: 16: + IC(0.000 ns) + CELL(0.787 ns) = 16.156 ns; Loc. = LC_X12_Y3_N7; Fanout = 2; REG Node = 'mac:mac1|dcfilter:inst3|addin[15]'
+        Info: Total cell delay = 6.246 ns ( 38.66 % )
+        Info: Total interconnect delay = 9.910 ns ( 61.34 % )
+    Info: - Smallest clock skew is -0.052 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.730 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 429; CLK Node = 'clk'
+            Info: 2: + IC(0.550 ns) + CELL(0.711 ns) = 2.730 ns; Loc. = LC_X12_Y3_N7; Fanout = 2; REG Node = 'mac:mac1|dcfilter:inst3|addin[15]'
+            Info: Total cell delay = 2.180 ns ( 79.85 % )
+            Info: Total interconnect delay = 0.550 ns ( 20.15 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.782 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 429; CLK Node = 'clk'
+            Info: 2: + IC(0.602 ns) + CELL(0.711 ns) = 2.782 ns; Loc. = LC_X17_Y10_N4; Fanout = 44; REG Node = 'controller:inst2|mac1b_sel[1]'
+            Info: Total cell delay = 2.180 ns ( 78.36 % )
+            Info: Total interconnect delay = 0.602 ns ( 21.64 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "controller:inst2|output_counter[5]" (data pin = "cf_load", clock pin = "clk") is 7.589 ns
+    Info: + Longest pin to register delay is 10.334 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.475 ns) = 1.475 ns; Loc. = PIN_50; Fanout = 2; PIN Node = 'cf_load'
+        Info: 2: + IC(6.270 ns) + CELL(0.114 ns) = 7.859 ns; Loc. = LC_X22_Y9_N9; Fanout = 6; COMB Node = 'controller:inst2|output_counter[5]~12'
+        Info: 3: + IC(1.608 ns) + CELL(0.867 ns) = 10.334 ns; Loc. = LC_X19_Y12_N6; Fanout = 11; REG Node = 'controller:inst2|output_counter[5]'
+        Info: Total cell delay = 2.456 ns ( 23.77 % )
+        Info: Total interconnect delay = 7.878 ns ( 76.23 % )
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.782 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 429; CLK Node = 'clk'
+        Info: 2: + IC(0.602 ns) + CELL(0.711 ns) = 2.782 ns; Loc. = LC_X19_Y12_N6; Fanout = 11; REG Node = 'controller:inst2|output_counter[5]'
+        Info: Total cell delay = 2.180 ns ( 78.36 % )
+        Info: Total interconnect delay = 0.602 ns ( 21.64 % )
+Info: tco from clock "clk" to destination pin "mac1out[1]" through register "mac:mac1|feedback_gate:inst1|dout[1]" is 8.894 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.743 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 429; CLK Node = 'clk'
+        Info: 2: + IC(0.563 ns) + CELL(0.711 ns) = 2.743 ns; Loc. = LC_X17_Y5_N3; Fanout = 6; REG Node = 'mac:mac1|feedback_gate:inst1|dout[1]'
+        Info: Total cell delay = 2.180 ns ( 79.48 % )
+        Info: Total interconnect delay = 0.563 ns ( 20.52 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 5.927 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X17_Y5_N3; Fanout = 6; REG Node = 'mac:mac1|feedback_gate:inst1|dout[1]'
+        Info: 2: + IC(3.819 ns) + CELL(2.108 ns) = 5.927 ns; Loc. = PIN_79; Fanout = 0; PIN Node = 'mac1out[1]'
+        Info: Total cell delay = 2.108 ns ( 35.57 % )
+        Info: Total interconnect delay = 3.819 ns ( 64.43 % )
+Info: th for register "matrix_register:inst|reg8bit:a14|dout[6]" (data pin = "din[6]", clock pin = "clk") is -3.954 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.782 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 429; CLK Node = 'clk'
+        Info: 2: + IC(0.602 ns) + CELL(0.711 ns) = 2.782 ns; Loc. = LC_X20_Y11_N5; Fanout = 4; REG Node = 'matrix_register:inst|reg8bit:a14|dout[6]'
+        Info: Total cell delay = 2.180 ns ( 78.36 % )
+        Info: Total interconnect delay = 0.602 ns ( 21.64 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+    Info: - Shortest pin to register delay is 6.751 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.475 ns) = 1.475 ns; Loc. = PIN_84; Fanout = 12; PIN Node = 'din[6]'
+        Info: 2: + IC(5.161 ns) + CELL(0.115 ns) = 6.751 ns; Loc. = LC_X20_Y11_N5; Fanout = 4; REG Node = 'matrix_register:inst|reg8bit:a14|dout[6]'
+        Info: Total cell delay = 1.590 ns ( 23.55 % )
+        Info: Total interconnect delay = 5.161 ns ( 76.45 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 190 megabytes
+    Info: Processing ended: Mon Dec 05 14:20:28 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

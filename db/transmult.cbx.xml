@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="transmult">
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_9eh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac:mac1|mult1:inst|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_o0n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac_input_selector:inst11|REG_MUX:mac1_input_a|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_ugc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac_input_selector:inst11|REG_MUX:mac2_input_b|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_ugc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_9eh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac:mac2|mult1:inst|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_o0n.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_ugc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|transmult|mac_input_selector:inst11|REG_MUX:mac2_input_a|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_ugc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

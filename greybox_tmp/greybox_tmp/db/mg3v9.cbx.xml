@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mg3v9">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mg3v9|lpm_mux:mgl_prim1" CBX_FILE_NAME="mux_ugc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

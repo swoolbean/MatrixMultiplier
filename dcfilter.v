@@ -1,0 +1,17 @@
+module dcfilter(multout, clk, addin);
+input [15:0] multout;
+input clk;
+
+output [15:0] addin;
+
+reg [15:0] addin;
+
+always@(negedge clk)
+begin
+	if(multout === 16'bXXXXXXXXXXXXXXXX)
+		addin = 16'b0000000000000000;
+	else
+		addin = multout;
+end
+
+endmodule
