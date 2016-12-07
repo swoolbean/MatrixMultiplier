@@ -152,8 +152,8 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-mac:mac1|adder1:inst2
 mac:mac2|adder1:inst2
+mac:mac1|adder1:inst2
 }
 # macro_sequence
 
@@ -258,8 +258,8 @@ dataa
 3
 }
 # hierarchies {
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component
 }
 # macro_sequence
 
@@ -467,8 +467,8 @@ dataa0
 3
 }
 # hierarchies {
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
 }
 # macro_sequence
 
@@ -506,10 +506,10 @@ sin0
 3
 }
 # hierarchies {
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
 }
 # macro_sequence
 
@@ -733,8 +733,8 @@ cin0
 3
 }
 # hierarchies {
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
 }
 # macro_sequence
 
@@ -858,8 +858,8 @@ data0
 3
 }
 # hierarchies {
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
 }
 # macro_sequence
 
@@ -893,10 +893,10 @@ data0
 3
 }
 # hierarchies {
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
-mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
 mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
+mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
 }
 # macro_sequence
 
@@ -932,8 +932,8 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-mac:mac1|mult1:inst
 mac:mac2|mult1:inst
+mac:mac1|mult1:inst
 }
 # macro_sequence
 
@@ -1078,8 +1078,8 @@ clken
 2
 }
 # hierarchies {
-mac:mac1|mult1:inst|lpm_mult:lpm_mult_component
 mac:mac2|mult1:inst|lpm_mult:lpm_mult_component
+mac:mac1|mult1:inst|lpm_mult:lpm_mult_component
 }
 # macro_sequence
 
@@ -1193,8 +1193,8 @@ dataa0
 3
 }
 # hierarchies {
-mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated
 mac:mac2|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated
+mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated
 }
 # macro_sequence
 
@@ -1740,8 +1740,8 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-mac:mac1|dcfilter:inst3
 mac:mac2|dcfilter:inst3
+mac:mac1|dcfilter:inst3
 }
 # macro_sequence
 
@@ -2050,45 +2050,8 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-mac:mac1
 mac:mac2
-}
-# macro_sequence
-
-# end
-# entity
-feedback_gate
-# storage
-db|transmult.(27).cnf
-db|transmult.(27).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-feedback_gate.v
-11906f491b8e84b7effddc3d104c809b
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-mac:mac1|feedback_gate:inst1
-mac:mac2|feedback_gate:inst1
+mac:mac1
 }
 # macro_sequence
 
@@ -3109,135 +3072,6 @@ transmult.transmult0.rtl.mif
 
 # end
 # entity
-from_pos_half_cycle_buffer
-# storage
-db|transmult.(31).cnf
-db|transmult.(31).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-from_pos_half_cycle_buffer.v
-89a0d142cd9fc6621336c764b1f7842c
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-from_pos_half_cycle_buffer:inst3
-from_pos_half_cycle_buffer:inst4
-}
-# macro_sequence
-
-# end
-# entity
-output_register
-# storage
-db|transmult.(21).cnf
-db|transmult.(21).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-output_register.v
-1ddae8a0d1a4f0b5c75e707f81b53f34
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-output_register:inst1
-}
-# macro_sequence
-
-# end
-# entity
-transmult
-# storage
-db|transmult.(0).cnf
-db|transmult.(0).cnf
-# case_insensitive
-# source_file
-transmult.bdf
-bf37e59dc63a3eb0c5c8c1bf1a5d74e3
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-controller
-# storage
-db|transmult.(2).cnf
-db|transmult.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-controller.v
-18ac5b01ae1d158cba51e4ebcba3bbb
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-controller:inst2
-}
-# macro_sequence
-
-# end
-# entity
 reg8bit
 # storage
 db|transmult.(19).cnf
@@ -3280,6 +3114,172 @@ matrix_register:inst|reg8bit:a33
 matrix_register:inst|reg8bit:a14
 matrix_register:inst|reg8bit:a24
 matrix_register:inst|reg8bit:a34
+}
+# macro_sequence
+
+# end
+# entity
+output_register
+# storage
+db|transmult.(21).cnf
+db|transmult.(21).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+output_register.v
+41e02ba45d6180672df4bcbb229c6f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+output_register:inst1
+}
+# macro_sequence
+
+# end
+# entity
+from_pos_half_cycle_buffer
+# storage
+db|transmult.(31).cnf
+db|transmult.(31).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+from_pos_half_cycle_buffer.v
+88f89772e99dacb31ecebd7d3805515
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+from_pos_half_cycle_buffer:inst3
+from_pos_half_cycle_buffer:inst4
+}
+# macro_sequence
+
+# end
+# entity
+feedback_gate
+# storage
+db|transmult.(27).cnf
+db|transmult.(27).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+feedback_gate.v
+11906f491b8e84b7effddc3d104c809b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+mac:mac2|feedback_gate:inst1
+mac:mac1|feedback_gate:inst1
+}
+# macro_sequence
+
+# end
+# entity
+transmult
+# storage
+db|transmult.(0).cnf
+db|transmult.(0).cnf
+# case_insensitive
+# source_file
+transmult.bdf
+7bb42ce5e26428f6c970b0f66be94764
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+controller
+# storage
+db|transmult.(2).cnf
+db|transmult.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+controller.v
+4fa1c65b5836a4ffbacedad2c6facb
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+controller:inst2
 }
 # macro_sequence
 

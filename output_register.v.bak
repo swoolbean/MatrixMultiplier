@@ -1,3 +1,4 @@
+module output_register(din1, din2, input_sel1, input_sel2, mac_sel, reg_out_sel, output_rdy, clk, aclr, dout, b13);
 input [15:0] din1, din2;	// Inputs from MACs
 input [2:0] input_sel1, input_sel2;	// Lines for selecting registers for din1 and din2
 input [1:0] mac_sel;	// 2-bit line indicating which MAC(s) to get input from
@@ -127,6 +128,9 @@ begin
 				4'b1111:dout <= b44;
 			endcase
 		end
+		else
+			dout <= 4'b0000;
+			
 	end
 	
 	

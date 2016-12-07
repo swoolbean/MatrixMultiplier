@@ -128,6 +128,9 @@ begin
 				4'b1111:dout <= b44;
 			endcase
 		end
+		else if(output_rdy == 1'b0)
+			dout <= 4'b0000;
+			
 	end
 	
 	

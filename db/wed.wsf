@@ -997,14 +997,14 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project/db/transmult.sim.cvwf
 	}
 }
 
-VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.sim.cvwf")
+VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 {
 	ZOOM{
-		ZBEGIN = 2919095;
-		ZEND = 3231999;
-		NUMERATOR = 1045;
-		DENOMINATOR = 729878;
-		TOP_INDEX = 2;
+		ZBEGIN = 7440412;
+		ZEND = 8257378;
+		NUMERATOR = 1398;
+		DENOMINATOR = 816966;
+		TOP_INDEX = 12;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -1223,144 +1223,8 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dout";
-		INDEX = 26;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[15]";
-		INDEX = 27;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[14]";
-		INDEX = 28;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[13]";
-		INDEX = 29;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[12]";
-		INDEX = 30;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[11]";
-		INDEX = 31;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[10]";
-		INDEX = 32;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[9]";
-		INDEX = 33;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[8]";
-		INDEX = 34;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[7]";
-		INDEX = 35;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[6]";
-		INDEX = 36;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[5]";
-		INDEX = 37;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[4]";
-		INDEX = 38;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[3]";
-		INDEX = 39;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[2]";
-		INDEX = 40;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[1]";
-		INDEX = 41;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[0]";
-		INDEX = 42;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "mac1_sel[2]";
-		INDEX = 43;
+		INDEX = 26;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1368,7 +1232,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 	}
 	LINE{
 		SIGNAL = "mac1_sel[1]";
-		INDEX = 44;
+		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1376,6 +1240,142 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 	}
 	LINE{
 		SIGNAL = "mac1_sel[0]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina";
+		INDEX = 29;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[7]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[6]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[5]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[4]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[3]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[2]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[1]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[0]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb";
+		INDEX = 38;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[7]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[6]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[5]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[4]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[3]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[2]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[1]";
 		INDEX = 45;
 		FORMAT = E;
 		SCALE = 1;
@@ -1383,15 +1383,15 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out";
+		SIGNAL = "mac2inb[0]";
 		INDEX = 46;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[15]";
+		SIGNAL = "mac2out[15]";
 		INDEX = 47;
 		FORMAT = E;
 		SCALE = 1;
@@ -1399,7 +1399,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[14]";
+		SIGNAL = "mac2out[14]";
 		INDEX = 48;
 		FORMAT = E;
 		SCALE = 1;
@@ -1407,7 +1407,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[13]";
+		SIGNAL = "mac2out[13]";
 		INDEX = 49;
 		FORMAT = E;
 		SCALE = 1;
@@ -1415,7 +1415,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[12]";
+		SIGNAL = "mac2out[12]";
 		INDEX = 50;
 		FORMAT = E;
 		SCALE = 1;
@@ -1423,7 +1423,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[11]";
+		SIGNAL = "mac2out[11]";
 		INDEX = 51;
 		FORMAT = E;
 		SCALE = 1;
@@ -1431,7 +1431,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[10]";
+		SIGNAL = "mac2out[10]";
 		INDEX = 52;
 		FORMAT = E;
 		SCALE = 1;
@@ -1439,7 +1439,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[9]";
+		SIGNAL = "mac2out[9]";
 		INDEX = 53;
 		FORMAT = E;
 		SCALE = 1;
@@ -1447,7 +1447,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[8]";
+		SIGNAL = "mac2out[8]";
 		INDEX = 54;
 		FORMAT = E;
 		SCALE = 1;
@@ -1455,7 +1455,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[7]";
+		SIGNAL = "mac2out[7]";
 		INDEX = 55;
 		FORMAT = E;
 		SCALE = 1;
@@ -1463,7 +1463,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[6]";
+		SIGNAL = "mac2out[6]";
 		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
@@ -1471,7 +1471,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[5]";
+		SIGNAL = "mac2out[5]";
 		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
@@ -1479,7 +1479,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[4]";
+		SIGNAL = "mac2out[4]";
 		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
@@ -1487,7 +1487,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[3]";
+		SIGNAL = "mac2out[3]";
 		INDEX = 59;
 		FORMAT = E;
 		SCALE = 1;
@@ -1495,7 +1495,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[2]";
+		SIGNAL = "mac2out[2]";
 		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
@@ -1503,7 +1503,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[1]";
+		SIGNAL = "mac2out[1]";
 		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
@@ -1511,7 +1511,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[0]";
+		SIGNAL = "mac2out[0]";
 		INDEX = 62;
 		FORMAT = E;
 		SCALE = 1;
@@ -1520,14 +1520,14 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.si
 	}
 }
 
-VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
+VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/transmult.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 2432776;
-		ZEND = 3483241;
-		NUMERATOR = 1045;
-		DENOMINATOR = 729878;
-		TOP_INDEX = 2;
+		ZBEGIN = 4929502;
+		ZEND = 5746468;
+		NUMERATOR = 1398;
+		DENOMINATOR = 816966;
+		TOP_INDEX = 12;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -1746,144 +1746,8 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "dout";
-		INDEX = 26;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[15]";
-		INDEX = 27;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[14]";
-		INDEX = 28;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[13]";
-		INDEX = 29;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[12]";
-		INDEX = 30;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[11]";
-		INDEX = 31;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[10]";
-		INDEX = 32;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[9]";
-		INDEX = 33;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[8]";
-		INDEX = 34;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[7]";
-		INDEX = 35;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[6]";
-		INDEX = 36;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[5]";
-		INDEX = 37;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[4]";
-		INDEX = 38;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[3]";
-		INDEX = 39;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[2]";
-		INDEX = 40;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[1]";
-		INDEX = 41;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "dout[0]";
-		INDEX = 42;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "mac1_sel[2]";
-		INDEX = 43;
+		INDEX = 26;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1891,7 +1755,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 	}
 	LINE{
 		SIGNAL = "mac1_sel[1]";
-		INDEX = 44;
+		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -1899,6 +1763,142 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 	}
 	LINE{
 		SIGNAL = "mac1_sel[0]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina";
+		INDEX = 29;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[7]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[6]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[5]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[4]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[3]";
+		INDEX = 34;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[2]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[1]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2ina[0]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb";
+		INDEX = 38;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[7]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[6]";
+		INDEX = 40;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[5]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[4]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[3]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[2]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2inb[1]";
 		INDEX = 45;
 		FORMAT = E;
 		SCALE = 1;
@@ -1906,23 +1906,23 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out";
+		SIGNAL = "mac2inb[0]";
 		INDEX = 46;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "mac1out[15]";
-		INDEX = 47;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[14]";
+		SIGNAL = "mac2out";
+		INDEX = 47;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2out[15]";
 		INDEX = 48;
 		FORMAT = E;
 		SCALE = 1;
@@ -1930,7 +1930,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[13]";
+		SIGNAL = "mac2out[14]";
 		INDEX = 49;
 		FORMAT = E;
 		SCALE = 1;
@@ -1938,7 +1938,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[12]";
+		SIGNAL = "mac2out[13]";
 		INDEX = 50;
 		FORMAT = E;
 		SCALE = 1;
@@ -1946,7 +1946,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[11]";
+		SIGNAL = "mac2out[12]";
 		INDEX = 51;
 		FORMAT = E;
 		SCALE = 1;
@@ -1954,7 +1954,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[10]";
+		SIGNAL = "mac2out[11]";
 		INDEX = 52;
 		FORMAT = E;
 		SCALE = 1;
@@ -1962,7 +1962,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[9]";
+		SIGNAL = "mac2out[10]";
 		INDEX = 53;
 		FORMAT = E;
 		SCALE = 1;
@@ -1970,7 +1970,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[8]";
+		SIGNAL = "mac2out[9]";
 		INDEX = 54;
 		FORMAT = E;
 		SCALE = 1;
@@ -1978,7 +1978,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[7]";
+		SIGNAL = "mac2out[8]";
 		INDEX = 55;
 		FORMAT = E;
 		SCALE = 1;
@@ -1986,7 +1986,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[6]";
+		SIGNAL = "mac2out[7]";
 		INDEX = 56;
 		FORMAT = E;
 		SCALE = 1;
@@ -1994,7 +1994,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[5]";
+		SIGNAL = "mac2out[6]";
 		INDEX = 57;
 		FORMAT = E;
 		SCALE = 1;
@@ -2002,7 +2002,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[4]";
+		SIGNAL = "mac2out[5]";
 		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
@@ -2010,7 +2010,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[3]";
+		SIGNAL = "mac2out[4]";
 		INDEX = 59;
 		FORMAT = E;
 		SCALE = 1;
@@ -2018,7 +2018,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[2]";
+		SIGNAL = "mac2out[3]";
 		INDEX = 60;
 		FORMAT = E;
 		SCALE = 1;
@@ -2026,7 +2026,7 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[1]";
+		SIGNAL = "mac2out[2]";
 		INDEX = 61;
 		FORMAT = E;
 		SCALE = 1;
@@ -2034,8 +2034,16 @@ VECTOR("C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mac1out[0]";
+		SIGNAL = "mac2out[1]";
 		INDEX = 62;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mac2out[0]";
+		INDEX = 63;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

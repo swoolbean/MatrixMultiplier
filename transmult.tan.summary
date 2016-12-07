@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.589 ns
-From           : cf_load
-To             : controller:inst2|output_counter[0]
+Actual Time    : 7.653 ns
+From           : din[2]
+To             : matrix_register:inst|reg8bit:a33|dout[2]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.894 ns
-From           : mac:mac1|feedback_gate:inst1|dout[1]
-To             : mac1out[1]
+Actual Time    : 15.357 ns
+From           : controller:inst2|mac2a_sel[1]
+To             : mac2ina[1]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.954 ns
-From           : din[6]
-To             : matrix_register:inst|reg8bit:a14|dout[6]
+Actual Time    : -4.272 ns
+From           : din[4]
+To             : matrix_register:inst|reg8bit:a11|dout[4]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 30.36 MHz ( period = 32.938 ns )
-From           : controller:inst2|mac1b_sel[1]
-To             : mac:mac1|dcfilter:inst3|addin[15]
+Actual Time    : 30.42 MHz ( period = 32.876 ns )
+From           : controller:inst2|mac2a_sel[0]
+To             : mac:mac2|dcfilter:inst3|addin[13]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0

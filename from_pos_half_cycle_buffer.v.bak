@@ -4,9 +4,9 @@ input clk;
 
 reg [2:0] dout;
 
-output dout;
+output [2:0] dout;
 
-always@(posedge clk)
+always@(negedge clk)
 begin
 	dout = din;
 end

@@ -67,11 +67,11 @@ CHIP  "transmult"  ASSIGNED TO AN: EP1C3T100A8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-din[2]                       : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
-output_counter[4]            : 2         : output : 3.3-V LVTTL       :         : 1         : N              
-din[7]                       : 3         : input  : 3.3-V LVTTL       :         : 1         : N              
-din[0]                       : 4         : input  : 3.3-V LVTTL       :         : 1         : N              
-mac1out[5]                   : 5         : output : 3.3-V LVTTL       :         : 1         : N              
+din[5]                       : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
+din[2]                       : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
+din[0]                       : 3         : input  : 3.3-V LVTTL       :         : 1         : N              
+mac2out[5]                   : 4         : output : 3.3-V LVTTL       :         : 1         : N              
+mac2ina[7]                   : 5         : output : 3.3-V LVTTL       :         : 1         : N              
 ~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 3.3-V LVTTL       :         : 1         : N              
 DATA0                        : 7         : input  :                   :         : 1         :                
 nCONFIG                      : 8         :        :                   :         : 1         :                
@@ -86,44 +86,44 @@ DCLK                         : 16        : bidir  :                   :         
 ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 17        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 18        : power  :                   : 3.3V    : 1         :                
 GND                          : 19        : gnd    :                   :         :           :                
-dout[1]                      : 20        : output : 3.3-V LVTTL       :         : 1         : N              
-dout[0]                      : 21        : output : 3.3-V LVTTL       :         : 1         : N              
-dout[2]                      : 22        : output : 3.3-V LVTTL       :         : 1         : N              
-dout[3]                      : 23        : output : 3.3-V LVTTL       :         : 1         : N              
-dout[10]                     : 24        : output : 3.3-V LVTTL       :         : 1         : N              
-mac1_sel[1]                  : 25        : output : 3.3-V LVTTL       :         : 1         : N              
-dout[11]                     : 26        : output : 3.3-V LVTTL       :         : 4         : N              
-dout[12]                     : 27        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1_sel[2]                  : 28        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1_sel[0]                  : 29        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[11]                  : 20        : output : 3.3-V LVTTL       :         : 1         : N              
+mac2out[9]                   : 21        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 22        :        :                   :         : 1         :                
+mac2out[4]                   : 23        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 24        :        :                   :         : 1         :                
+GND*                         : 25        :        :                   :         : 1         :                
+mac2out[15]                  : 26        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[0]                   : 27        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[10]                  : 28        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[13]                  : 29        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 30        : gnd    :                   :         :           :                
 VCCIO4                       : 31        : power  :                   : 3.3V    : 4         :                
 GND                          : 32        : gnd    :                   :         :           :                
 VCCINT                       : 33        : power  :                   : 1.5V    :           :                
-dout[14]                     : 34        : output : 3.3-V LVTTL       :         : 4         : N              
-dout[5]                      : 35        : output : 3.3-V LVTTL       :         : 4         : N              
-dout[8]                      : 36        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1out[10]                  : 37        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1out[15]                  : 38        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1out[12]                  : 39        : output : 3.3-V LVTTL       :         : 4         : N              
-output_counter[3]            : 40        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1out[0]                   : 41        : output : 3.3-V LVTTL       :         : 4         : N              
-output_counter[5]            : 42        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[2]                   : 34        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[1]                   : 35        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[14]                  : 36        : output : 3.3-V LVTTL       :         : 4         : N              
+din[3]                       : 37        : input  : 3.3-V LVTTL       :         : 4         : N              
+mac2ina[0]                   : 38        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2ina[5]                   : 39        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2ina[2]                   : 40        : output : 3.3-V LVTTL       :         : 4         : N              
+output_counter[4]            : 41        : output : 3.3-V LVTTL       :         : 4         : N              
+counter[2]                   : 42        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 43        : gnd    :                   :         :           :                
 VCCINT                       : 44        : power  :                   : 1.5V    :           :                
 GND                          : 45        : gnd    :                   :         :           :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-mac1out[13]                  : 47        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1out[7]                   : 48        : output : 3.3-V LVTTL       :         : 4         : N              
-mac1out[8]                   : 49        : output : 3.3-V LVTTL       :         : 4         : N              
-cf_load                      : 50        : input  : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : 51        :        :                   :         : 3         :                
-GND*                         : 52        :        :                   :         : 3         :                
-dout[4]                      : 53        : output : 3.3-V LVTTL       :         : 3         : N              
-mac1out[6]                   : 54        : output : 3.3-V LVTTL       :         : 3         : N              
-mac1out[14]                  : 55        : output : 3.3-V LVTTL       :         : 3         : N              
-mac1out[9]                   : 56        : output : 3.3-V LVTTL       :         : 3         : N              
-mac1out[4]                   : 57        : output : 3.3-V LVTTL       :         : 3         : N              
+mac2out[12]                  : 47        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[3]                   : 48        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 49        :        :                   :         : 4         :                
+mac1_sel[0]                  : 50        : output : 3.3-V LVTTL       :         : 4         : N              
+mac2out[6]                   : 51        : output : 3.3-V LVTTL       :         : 3         : N              
+output_counter[0]            : 52        : output : 3.3-V LVTTL       :         : 3         : N              
+output_counter[3]            : 53        : output : 3.3-V LVTTL       :         : 3         : N              
+output_counter[2]            : 54        : output : 3.3-V LVTTL       :         : 3         : N              
+output_counter[1]            : 55        : output : 3.3-V LVTTL       :         : 3         : N              
+mac2out[8]                   : 56        : output : 3.3-V LVTTL       :         : 3         : N              
+cf_load                      : 57        : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 58        : gnd    :                   :         :           :                
 VCCIO3                       : 59        : power  :                   : 3.3V    : 3         :                
 CONF_DONE                    : 60        :        :                   :         : 3         :                
@@ -131,39 +131,39 @@ nSTATUS                      : 61        :        :                   :         
 TCK                          : 62        : input  :                   :         : 3         :                
 TMS                          : 63        : input  :                   :         : 3         :                
 TDO                          : 64        : output :                   :         : 3         :                
-mac1out[3]                   : 65        : output : 3.3-V LVTTL       :         : 3         : N              
+mac2ina[1]                   : 65        : output : 3.3-V LVTTL       :         : 3         : N              
 reset                        : 66        : input  : 3.3-V LVTTL       :         : 3         : N              
 TDI                          : 67        : input  :                   :         : 3         :                
-counter[5]                   : 68        : output : 3.3-V LVTTL       :         : 3         : N              
-din[1]                       : 69        : input  : 3.3-V LVTTL       :         : 3         : N              
-counter[3]                   : 70        : output : 3.3-V LVTTL       :         : 3         : N              
-din[5]                       : 71        : input  : 3.3-V LVTTL       :         : 3         : N              
-counter[4]                   : 72        : output : 3.3-V LVTTL       :         : 3         : N              
-counter[1]                   : 73        : output : 3.3-V LVTTL       :         : 3         : N              
-din[3]                       : 74        : input  : 3.3-V LVTTL       :         : 3         : N              
-output_counter[2]            : 75        : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 76        :        :                   :         : 2         :                
-dout[6]                      : 77        : output : 3.3-V LVTTL       :         : 2         : N              
-mac1out[11]                  : 78        : output : 3.3-V LVTTL       :         : 2         : N              
-mac1out[1]                   : 79        : output : 3.3-V LVTTL       :         : 2         : N              
+output_counter[5]            : 68        : output : 3.3-V LVTTL       :         : 3         : N              
+counter[4]                   : 69        : output : 3.3-V LVTTL       :         : 3         : N              
+counter[5]                   : 70        : output : 3.3-V LVTTL       :         : 3         : N              
+mac2inb[1]                   : 71        : output : 3.3-V LVTTL       :         : 3         : N              
+mac2inb[2]                   : 72        : output : 3.3-V LVTTL       :         : 3         : N              
+mac2inb[3]                   : 73        : output : 3.3-V LVTTL       :         : 3         : N              
+din[1]                       : 74        : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 75        :        :                   :         : 3         :                
+mac2inb[6]                   : 76        : output : 3.3-V LVTTL       :         : 2         : N              
+mac1_sel[2]                  : 77        : output : 3.3-V LVTTL       :         : 2         : N              
+counter[1]                   : 78        : output : 3.3-V LVTTL       :         : 2         : N              
+mac1_sel[1]                  : 79        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
 GND                          : 81        : gnd    :                   :         :           :                
 VCCINT                       : 82        : power  :                   : 1.5V    :           :                
 GND                          : 83        : gnd    :                   :         :           :                
-din[6]                       : 84        : input  : 3.3-V LVTTL       :         : 2         : N              
-output_counter[0]            : 85        : output : 3.3-V LVTTL       :         : 2         : N              
-output_counter[1]            : 86        : output : 3.3-V LVTTL       :         : 2         : N              
-mac1out[2]                   : 87        : output : 3.3-V LVTTL       :         : 2         : N              
-counter[2]                   : 88        : output : 3.3-V LVTTL       :         : 2         : N              
-din[4]                       : 89        : input  : 3.3-V LVTTL       :         : 2         : N              
-counter[0]                   : 90        : output : 3.3-V LVTTL       :         : 2         : N              
-dout[9]                      : 91        : output : 3.3-V LVTTL       :         : 2         : N              
-dout[15]                     : 92        : output : 3.3-V LVTTL       :         : 2         : N              
+counter[3]                   : 84        : output : 3.3-V LVTTL       :         : 2         : N              
+counter[0]                   : 85        : output : 3.3-V LVTTL       :         : 2         : N              
+mac2inb[0]                   : 86        : output : 3.3-V LVTTL       :         : 2         : N              
+mac2ina[3]                   : 87        : output : 3.3-V LVTTL       :         : 2         : N              
+mac2ina[4]                   : 88        : output : 3.3-V LVTTL       :         : 2         : N              
+mac2inb[4]                   : 89        : output : 3.3-V LVTTL       :         : 2         : N              
+mac2ina[6]                   : 90        : output : 3.3-V LVTTL       :         : 2         : N              
+din[7]                       : 91        : input  : 3.3-V LVTTL       :         : 2         : N              
+din[4]                       : 92        : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : 93        : power  :                   : 1.5V    :           :                
 GND                          : 94        : gnd    :                   :         :           :                
 VCCIO2                       : 95        : power  :                   : 3.3V    : 2         :                
 GND                          : 96        : gnd    :                   :         :           :                
-dout[7]                      : 97        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 98        :        :                   :         : 2         :                
-GND*                         : 99        :        :                   :         : 2         :                
-dout[13]                     : 100       : output : 3.3-V LVTTL       :         : 2         : N              
+mac2inb[7]                   : 97        : output : 3.3-V LVTTL       :         : 2         : N              
+din[6]                       : 98        : input  : 3.3-V LVTTL       :         : 2         : N              
+mac2out[7]                   : 99        : output : 3.3-V LVTTL       :         : 2         : N              
+mac2inb[5]                   : 100       : output : 3.3-V LVTTL       :         : 2         : N              

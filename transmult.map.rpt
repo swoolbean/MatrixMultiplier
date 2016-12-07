@@ -1,5 +1,5 @@
 Analysis & Synthesis report for transmult
-Mon Dec 05 14:20:21 2016
+Wed Dec 07 12:13:32 2016
 Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
 
 
@@ -16,16 +16,16 @@ Quartus II Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Source assignments for mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
- 12. Source assignments for mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
- 13. Parameter Settings for User Entity Instance: mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component
- 14. Parameter Settings for User Entity Instance: mac:mac1|mult1:inst|lpm_mult:lpm_mult_component
- 15. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac1_input_a|lpm_mux:lpm_mux_component
- 16. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component
- 17. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac2_input_a|lpm_mux:lpm_mux_component
- 18. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac2_input_b|lpm_mux:lpm_mux_component
- 19. Parameter Settings for User Entity Instance: mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component
- 20. Parameter Settings for User Entity Instance: mac:mac2|mult1:inst|lpm_mult:lpm_mult_component
+ 11. Source assignments for mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
+ 12. Source assignments for mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
+ 13. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac1_input_a|lpm_mux:lpm_mux_component
+ 14. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component
+ 15. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac2_input_a|lpm_mux:lpm_mux_component
+ 16. Parameter Settings for User Entity Instance: mac_input_selector:inst11|REG_MUX:mac2_input_b|lpm_mux:lpm_mux_component
+ 17. Parameter Settings for User Entity Instance: mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component
+ 18. Parameter Settings for User Entity Instance: mac:mac2|mult1:inst|lpm_mult:lpm_mult_component
+ 19. Parameter Settings for User Entity Instance: mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component
+ 20. Parameter Settings for User Entity Instance: mac:mac1|mult1:inst|lpm_mult:lpm_mult_component
  21. lpm_mult Parameter Settings by Entity Instance
  22. Analysis & Synthesis Messages
  23. Analysis & Synthesis Suppressed Messages
@@ -54,12 +54,12 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 05 14:20:21 2016        ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 07 12:13:32 2016        ;
 ; Quartus II Version          ; 9.1 Build 304 01/25/2010 SP 1 SJ Web Edition ;
 ; Revision Name               ; transmult                                    ;
 ; Top-level Entity Name       ; transmult                                    ;
 ; Family                      ; Cyclone                                      ;
-; Total logic elements        ; 1,055                                        ;
+; Total logic elements        ; 460                                          ;
 ; Total pins                  ; 58                                           ;
 ; Total virtual pins          ; 0                                            ;
 ; Total memory bits           ; 0                                            ;
@@ -172,14 +172,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; dcfilter.v                       ; yes             ; User Verilog HDL File              ; C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/dcfilter.v                   ;
 ; output_register.v                ; yes             ; User Verilog HDL File              ; C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/output_register.v            ;
 ; from_pos_half_cycle_buffer.v     ; yes             ; User Verilog HDL File              ; C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/from_pos_half_cycle_buffer.v ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_mux.tdf                           ;
+; db/mux_ugc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/mux_ugc.tdf               ;
 ; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                       ;
 ; addcore.tdf                      ; yes             ; Megafunction                       ; c:/altera/91sp1/quartus/libraries/megafunctions/addcore.tdf                           ;
 ; a_csnbuffer.tdf                  ; yes             ; Megafunction                       ; c:/altera/91sp1/quartus/libraries/megafunctions/a_csnbuffer.tdf                       ;
 ; altshift.tdf                     ; yes             ; Megafunction                       ; c:/altera/91sp1/quartus/libraries/megafunctions/altshift.tdf                          ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                       ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_mult.tdf                          ;
 ; db/mult_o0n.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/mult_o0n.tdf              ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/altera/91sp1/quartus/libraries/megafunctions/lpm_mux.tdf                           ;
-; db/mux_ugc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/db/mux_ugc.tdf               ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
 
 
@@ -188,33 +188,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 1055  ;
-;     -- Combinational with no register       ; 626   ;
-;     -- Register only                        ; 294   ;
-;     -- Combinational with a register        ; 135   ;
+; Total logic elements                        ; 460   ;
+;     -- Combinational with no register       ; 276   ;
+;     -- Register only                        ; 116   ;
+;     -- Combinational with a register        ; 68    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 461   ;
-;     -- 3 input functions                    ; 219   ;
-;     -- 2 input functions                    ; 66    ;
-;     -- 1 input functions                    ; 14    ;
+;     -- 4 input functions                    ; 178   ;
+;     -- 3 input functions                    ; 111   ;
+;     -- 2 input functions                    ; 47    ;
+;     -- 1 input functions                    ; 7     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 913   ;
-;     -- arithmetic mode                      ; 142   ;
+;     -- normal mode                          ; 384   ;
+;     -- arithmetic mode                      ; 76    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 22    ;
-;     -- asynchronous clear/load mode         ; 340   ;
+;     -- synchronous clear/load mode          ; 12    ;
+;     -- asynchronous clear/load mode         ; 165   ;
 ;                                             ;       ;
-; Total registers                             ; 429   ;
-; Total logic cells in carry chains           ; 158   ;
+; Total registers                             ; 184   ;
+; Total logic cells in carry chains           ; 85    ;
 ; I/O pins                                    ; 58    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 429   ;
-; Total fan-out                               ; 4072  ;
-; Average fan-out                             ; 3.66  ;
+; Maximum fan-out                             ; 184   ;
+; Total fan-out                               ; 1808  ;
+; Average fan-out                             ; 3.49  ;
 +---------------------------------------------+-------+
 
 
@@ -223,20 +223,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                        ; Library Name ;
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |transmult                                   ; 1055 (1)    ; 429          ; 0           ; 58   ; 0            ; 626 (1)      ; 294 (0)           ; 135 (0)          ; 158 (0)         ; 0 (0)      ; |transmult                                                                                                 ; work         ;
-;    |controller:inst2|                        ; 95 (95)     ; 51           ; 0           ; 0    ; 0            ; 44 (44)      ; 0 (0)             ; 51 (51)          ; 12 (12)         ; 0 (0)      ; |transmult|controller:inst2                                                                                ;              ;
+; |transmult                                   ; 460 (1)     ; 184          ; 0           ; 58   ; 0            ; 276 (1)      ; 116 (0)           ; 68 (0)           ; 85 (0)          ; 0 (0)      ; |transmult                                                                                                 ; work         ;
+;    |controller:inst2|                        ; 63 (63)     ; 35           ; 0           ; 0    ; 0            ; 28 (28)      ; 1 (1)             ; 34 (34)          ; 12 (12)         ; 0 (0)      ; |transmult|controller:inst2                                                                                ;              ;
 ;    |from_pos_half_cycle_buffer:inst3|        ; 3 (3)       ; 3            ; 0           ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|from_pos_half_cycle_buffer:inst3                                                                ; work         ;
-;    |from_pos_half_cycle_buffer:inst4|        ; 3 (3)       ; 3            ; 0           ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|from_pos_half_cycle_buffer:inst4                                                                ; work         ;
-;    |mac:mac1|                                ; 156 (0)     ; 50           ; 0           ; 0    ; 0            ; 106 (0)      ; 16 (0)            ; 34 (0)           ; 73 (0)          ; 0 (0)      ; |transmult|mac:mac1                                                                                        ;              ;
-;       |adder1:inst2|                         ; 16 (0)      ; 0            ; 0           ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |transmult|mac:mac1|adder1:inst2                                                                           ; work         ;
-;          |lpm_add_sub:lpm_add_sub_component| ; 16 (0)      ; 0            ; 0           ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |transmult|mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component                                         ; work         ;
-;             |addcore:adder|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |transmult|mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder                           ; work         ;
-;                |a_csnbuffer:result_node|     ; 16 (16)     ; 0            ; 0           ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 16 (16)         ; 0 (0)      ; |transmult|mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node   ; work         ;
-;       |dcfilter:inst3|                       ; 16 (16)     ; 16           ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |transmult|mac:mac1|dcfilter:inst3                                                                         ; work         ;
-;       |feedback_gate:inst1|                  ; 39 (39)     ; 34           ; 0           ; 0    ; 0            ; 5 (5)        ; 16 (16)           ; 18 (18)          ; 0 (0)           ; 0 (0)      ; |transmult|mac:mac1|feedback_gate:inst1                                                                    ; work         ;
-;       |mult1:inst|                           ; 85 (0)      ; 0            ; 0           ; 0    ; 0            ; 85 (0)       ; 0 (0)             ; 0 (0)            ; 41 (0)          ; 0 (0)      ; |transmult|mac:mac1|mult1:inst                                                                             ; work         ;
-;          |lpm_mult:lpm_mult_component|       ; 85 (0)      ; 0            ; 0           ; 0    ; 0            ; 85 (0)       ; 0 (0)             ; 0 (0)            ; 41 (0)          ; 0 (0)      ; |transmult|mac:mac1|mult1:inst|lpm_mult:lpm_mult_component                                                 ; work         ;
-;             |mult_o0n:auto_generated|        ; 85 (85)     ; 0            ; 0           ; 0    ; 0            ; 85 (85)      ; 0 (0)             ; 0 (0)            ; 41 (41)         ; 0 (0)      ; |transmult|mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated                         ; work         ;
 ;    |mac:mac2|                                ; 156 (0)     ; 50           ; 0           ; 0    ; 0            ; 106 (0)      ; 16 (0)            ; 34 (0)           ; 73 (0)          ; 0 (0)      ; |transmult|mac:mac2                                                                                        ; work         ;
 ;       |adder1:inst2|                         ; 16 (0)      ; 0            ; 0           ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |transmult|mac:mac2|adder1:inst2                                                                           ; work         ;
 ;          |lpm_add_sub:lpm_add_sub_component| ; 16 (0)      ; 0            ; 0           ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 16 (0)          ; 0 (0)      ; |transmult|mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component                                         ; work         ;
@@ -247,22 +236,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |mult1:inst|                           ; 85 (0)      ; 0            ; 0           ; 0    ; 0            ; 85 (0)       ; 0 (0)             ; 0 (0)            ; 41 (0)          ; 0 (0)      ; |transmult|mac:mac2|mult1:inst                                                                             ; work         ;
 ;          |lpm_mult:lpm_mult_component|       ; 85 (0)      ; 0            ; 0           ; 0    ; 0            ; 85 (0)       ; 0 (0)             ; 0 (0)            ; 41 (0)          ; 0 (0)      ; |transmult|mac:mac2|mult1:inst|lpm_mult:lpm_mult_component                                                 ; work         ;
 ;             |mult_o0n:auto_generated|        ; 85 (85)     ; 0            ; 0           ; 0    ; 0            ; 85 (85)      ; 0 (0)             ; 0 (0)            ; 41 (41)         ; 0 (0)      ; |transmult|mac:mac2|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated                         ; work         ;
-;    |mac_input_selector:inst11|               ; 273 (0)     ; 0            ; 0           ; 0    ; 0            ; 273 (0)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11                                                                       ; work         ;
-;       |REG_MUX:mac1_input_a|                 ; 64 (0)      ; 0            ; 0           ; 0    ; 0            ; 64 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac1_input_a                                                  ; work         ;
-;          |lpm_mux:lpm_mux_component|         ; 64 (0)      ; 0            ; 0           ; 0    ; 0            ; 64 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac1_input_a|lpm_mux:lpm_mux_component                        ; work         ;
-;             |mux_ugc:auto_generated|         ; 64 (64)     ; 0            ; 0           ; 0    ; 0            ; 64 (64)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac1_input_a|lpm_mux:lpm_mux_component|mux_ugc:auto_generated ; work         ;
-;       |REG_MUX:mac1_input_b|                 ; 68 (0)      ; 0            ; 0           ; 0    ; 0            ; 68 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac1_input_b                                                  ; work         ;
-;          |lpm_mux:lpm_mux_component|         ; 68 (0)      ; 0            ; 0           ; 0    ; 0            ; 68 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component                        ; work         ;
-;             |mux_ugc:auto_generated|         ; 68 (68)     ; 0            ; 0           ; 0    ; 0            ; 68 (68)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac1_input_b|lpm_mux:lpm_mux_component|mux_ugc:auto_generated ; work         ;
-;       |REG_MUX:mac2_input_a|                 ; 70 (0)      ; 0            ; 0           ; 0    ; 0            ; 70 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_a                                                  ; work         ;
-;          |lpm_mux:lpm_mux_component|         ; 70 (0)      ; 0            ; 0           ; 0    ; 0            ; 70 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_a|lpm_mux:lpm_mux_component                        ; work         ;
-;             |mux_ugc:auto_generated|         ; 70 (70)     ; 0            ; 0           ; 0    ; 0            ; 70 (70)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_a|lpm_mux:lpm_mux_component|mux_ugc:auto_generated ; work         ;
-;       |REG_MUX:mac2_input_b|                 ; 71 (0)      ; 0            ; 0           ; 0    ; 0            ; 71 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_b                                                  ; work         ;
-;          |lpm_mux:lpm_mux_component|         ; 71 (0)      ; 0            ; 0           ; 0    ; 0            ; 71 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_b|lpm_mux:lpm_mux_component                        ; work         ;
-;             |mux_ugc:auto_generated|         ; 71 (71)     ; 0            ; 0           ; 0    ; 0            ; 71 (71)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_b|lpm_mux:lpm_mux_component|mux_ugc:auto_generated ; work         ;
+;    |mac_input_selector:inst11|               ; 141 (0)     ; 0            ; 0           ; 0    ; 0            ; 141 (0)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11                                                                       ;              ;
+;       |REG_MUX:mac2_input_a|                 ; 73 (0)      ; 0            ; 0           ; 0    ; 0            ; 73 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_a                                                  ; work         ;
+;          |lpm_mux:lpm_mux_component|         ; 73 (0)      ; 0            ; 0           ; 0    ; 0            ; 73 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_a|lpm_mux:lpm_mux_component                        ; work         ;
+;             |mux_ugc:auto_generated|         ; 73 (73)     ; 0            ; 0           ; 0    ; 0            ; 73 (73)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_a|lpm_mux:lpm_mux_component|mux_ugc:auto_generated ; work         ;
+;       |REG_MUX:mac2_input_b|                 ; 68 (0)      ; 0            ; 0           ; 0    ; 0            ; 68 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_b                                                  ; work         ;
+;          |lpm_mux:lpm_mux_component|         ; 68 (0)      ; 0            ; 0           ; 0    ; 0            ; 68 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_b|lpm_mux:lpm_mux_component                        ; work         ;
+;             |mux_ugc:auto_generated|         ; 68 (68)     ; 0            ; 0           ; 0    ; 0            ; 68 (68)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|mac_input_selector:inst11|REG_MUX:mac2_input_b|lpm_mux:lpm_mux_component|mux_ugc:auto_generated ; work         ;
 ;    |matrix_register:inst|                    ; 96 (0)      ; 96           ; 0           ; 0    ; 0            ; 0 (0)        ; 96 (0)            ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst                                                                            ; work         ;
 ;       |reg8bit:a11|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a11                                                                ; work         ;
-;       |reg8bit:a12|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a12                                                                ;              ;
+;       |reg8bit:a12|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a12                                                                ; work         ;
 ;       |reg8bit:a13|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a13                                                                ; work         ;
 ;       |reg8bit:a14|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a14                                                                ; work         ;
 ;       |reg8bit:a21|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a21                                                                ; work         ;
@@ -273,116 +256,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |reg8bit:a32|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a32                                                                ; work         ;
 ;       |reg8bit:a33|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a33                                                                ; work         ;
 ;       |reg8bit:a34|                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |transmult|matrix_register:inst|reg8bit:a34                                                                ; work         ;
-;    |output_register:inst1|                   ; 272 (272)   ; 176          ; 0           ; 0    ; 0            ; 96 (96)      ; 160 (160)         ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |transmult|output_register:inst1                                                                           ; work         ;
 +----------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+----------------------------------------+-------------------------------------------+
-; Register name                          ; Reason for Removal                        ;
-+----------------------------------------+-------------------------------------------+
-; controller:inst2|reading               ; Stuck at VCC due to stuck port data_in    ;
-; output_register:inst1|b21[15]          ; Merged with output_register:inst1|b12[15] ;
-; output_register:inst1|b21[14]          ; Merged with output_register:inst1|b12[14] ;
-; output_register:inst1|b21[13]          ; Merged with output_register:inst1|b12[13] ;
-; output_register:inst1|b21[12]          ; Merged with output_register:inst1|b12[12] ;
-; output_register:inst1|b21[11]          ; Merged with output_register:inst1|b12[11] ;
-; output_register:inst1|b21[10]          ; Merged with output_register:inst1|b12[10] ;
-; output_register:inst1|b21[9]           ; Merged with output_register:inst1|b12[9]  ;
-; output_register:inst1|b21[8]           ; Merged with output_register:inst1|b12[8]  ;
-; output_register:inst1|b21[7]           ; Merged with output_register:inst1|b12[7]  ;
-; output_register:inst1|b21[6]           ; Merged with output_register:inst1|b12[6]  ;
-; output_register:inst1|b21[5]           ; Merged with output_register:inst1|b12[5]  ;
-; output_register:inst1|b21[4]           ; Merged with output_register:inst1|b12[4]  ;
-; output_register:inst1|b21[3]           ; Merged with output_register:inst1|b12[3]  ;
-; output_register:inst1|b21[2]           ; Merged with output_register:inst1|b12[2]  ;
-; output_register:inst1|b21[1]           ; Merged with output_register:inst1|b12[1]  ;
-; output_register:inst1|b21[0]           ; Merged with output_register:inst1|b12[0]  ;
-; output_register:inst1|b31[15]          ; Merged with output_register:inst1|b13[15] ;
-; output_register:inst1|b31[14]          ; Merged with output_register:inst1|b13[14] ;
-; output_register:inst1|b31[13]          ; Merged with output_register:inst1|b13[13] ;
-; output_register:inst1|b31[12]          ; Merged with output_register:inst1|b13[12] ;
-; output_register:inst1|b31[11]          ; Merged with output_register:inst1|b13[11] ;
-; output_register:inst1|b31[10]          ; Merged with output_register:inst1|b13[10] ;
-; output_register:inst1|b31[9]           ; Merged with output_register:inst1|b13[9]  ;
-; output_register:inst1|b31[8]           ; Merged with output_register:inst1|b13[8]  ;
-; output_register:inst1|b31[7]           ; Merged with output_register:inst1|b13[7]  ;
-; output_register:inst1|b31[6]           ; Merged with output_register:inst1|b13[6]  ;
-; output_register:inst1|b31[5]           ; Merged with output_register:inst1|b13[5]  ;
-; output_register:inst1|b31[4]           ; Merged with output_register:inst1|b13[4]  ;
-; output_register:inst1|b31[3]           ; Merged with output_register:inst1|b13[3]  ;
-; output_register:inst1|b31[2]           ; Merged with output_register:inst1|b13[2]  ;
-; output_register:inst1|b31[1]           ; Merged with output_register:inst1|b13[1]  ;
-; output_register:inst1|b31[0]           ; Merged with output_register:inst1|b13[0]  ;
-; output_register:inst1|b41[15]          ; Merged with output_register:inst1|b14[15] ;
-; output_register:inst1|b41[14]          ; Merged with output_register:inst1|b14[14] ;
-; output_register:inst1|b41[13]          ; Merged with output_register:inst1|b14[13] ;
-; output_register:inst1|b41[12]          ; Merged with output_register:inst1|b14[12] ;
-; output_register:inst1|b41[11]          ; Merged with output_register:inst1|b14[11] ;
-; output_register:inst1|b41[10]          ; Merged with output_register:inst1|b14[10] ;
-; output_register:inst1|b41[9]           ; Merged with output_register:inst1|b14[9]  ;
-; output_register:inst1|b41[8]           ; Merged with output_register:inst1|b14[8]  ;
-; output_register:inst1|b41[7]           ; Merged with output_register:inst1|b14[7]  ;
-; output_register:inst1|b41[6]           ; Merged with output_register:inst1|b14[6]  ;
-; output_register:inst1|b41[5]           ; Merged with output_register:inst1|b14[5]  ;
-; output_register:inst1|b41[4]           ; Merged with output_register:inst1|b14[4]  ;
-; output_register:inst1|b41[3]           ; Merged with output_register:inst1|b14[3]  ;
-; output_register:inst1|b41[2]           ; Merged with output_register:inst1|b14[2]  ;
-; output_register:inst1|b41[1]           ; Merged with output_register:inst1|b14[1]  ;
-; output_register:inst1|b41[0]           ; Merged with output_register:inst1|b14[0]  ;
-; output_register:inst1|b32[15]          ; Merged with output_register:inst1|b23[15] ;
-; output_register:inst1|b32[14]          ; Merged with output_register:inst1|b23[14] ;
-; output_register:inst1|b32[13]          ; Merged with output_register:inst1|b23[13] ;
-; output_register:inst1|b32[12]          ; Merged with output_register:inst1|b23[12] ;
-; output_register:inst1|b32[11]          ; Merged with output_register:inst1|b23[11] ;
-; output_register:inst1|b32[10]          ; Merged with output_register:inst1|b23[10] ;
-; output_register:inst1|b32[9]           ; Merged with output_register:inst1|b23[9]  ;
-; output_register:inst1|b32[8]           ; Merged with output_register:inst1|b23[8]  ;
-; output_register:inst1|b32[7]           ; Merged with output_register:inst1|b23[7]  ;
-; output_register:inst1|b32[6]           ; Merged with output_register:inst1|b23[6]  ;
-; output_register:inst1|b32[5]           ; Merged with output_register:inst1|b23[5]  ;
-; output_register:inst1|b32[4]           ; Merged with output_register:inst1|b23[4]  ;
-; output_register:inst1|b32[3]           ; Merged with output_register:inst1|b23[3]  ;
-; output_register:inst1|b32[2]           ; Merged with output_register:inst1|b23[2]  ;
-; output_register:inst1|b32[1]           ; Merged with output_register:inst1|b23[1]  ;
-; output_register:inst1|b32[0]           ; Merged with output_register:inst1|b23[0]  ;
-; output_register:inst1|b42[15]          ; Merged with output_register:inst1|b24[15] ;
-; output_register:inst1|b42[14]          ; Merged with output_register:inst1|b24[14] ;
-; output_register:inst1|b42[13]          ; Merged with output_register:inst1|b24[13] ;
-; output_register:inst1|b42[12]          ; Merged with output_register:inst1|b24[12] ;
-; output_register:inst1|b42[11]          ; Merged with output_register:inst1|b24[11] ;
-; output_register:inst1|b42[10]          ; Merged with output_register:inst1|b24[10] ;
-; output_register:inst1|b42[9]           ; Merged with output_register:inst1|b24[9]  ;
-; output_register:inst1|b42[8]           ; Merged with output_register:inst1|b24[8]  ;
-; output_register:inst1|b42[7]           ; Merged with output_register:inst1|b24[7]  ;
-; output_register:inst1|b42[6]           ; Merged with output_register:inst1|b24[6]  ;
-; output_register:inst1|b42[5]           ; Merged with output_register:inst1|b24[5]  ;
-; output_register:inst1|b42[4]           ; Merged with output_register:inst1|b24[4]  ;
-; output_register:inst1|b42[3]           ; Merged with output_register:inst1|b24[3]  ;
-; output_register:inst1|b42[2]           ; Merged with output_register:inst1|b24[2]  ;
-; output_register:inst1|b42[1]           ; Merged with output_register:inst1|b24[1]  ;
-; output_register:inst1|b42[0]           ; Merged with output_register:inst1|b24[0]  ;
-; output_register:inst1|b43[15]          ; Merged with output_register:inst1|b34[15] ;
-; output_register:inst1|b43[14]          ; Merged with output_register:inst1|b34[14] ;
-; output_register:inst1|b43[13]          ; Merged with output_register:inst1|b34[13] ;
-; output_register:inst1|b43[12]          ; Merged with output_register:inst1|b34[12] ;
-; output_register:inst1|b43[11]          ; Merged with output_register:inst1|b34[11] ;
-; output_register:inst1|b43[10]          ; Merged with output_register:inst1|b34[10] ;
-; output_register:inst1|b43[9]           ; Merged with output_register:inst1|b34[9]  ;
-; output_register:inst1|b43[8]           ; Merged with output_register:inst1|b34[8]  ;
-; output_register:inst1|b43[7]           ; Merged with output_register:inst1|b34[7]  ;
-; output_register:inst1|b43[6]           ; Merged with output_register:inst1|b34[6]  ;
-; output_register:inst1|b43[5]           ; Merged with output_register:inst1|b34[5]  ;
-; output_register:inst1|b43[4]           ; Merged with output_register:inst1|b34[4]  ;
-; output_register:inst1|b43[3]           ; Merged with output_register:inst1|b34[3]  ;
-; output_register:inst1|b43[2]           ; Merged with output_register:inst1|b34[2]  ;
-; output_register:inst1|b43[1]           ; Merged with output_register:inst1|b34[1]  ;
-; output_register:inst1|b43[0]           ; Merged with output_register:inst1|b34[0]  ;
-; controller:inst2|mac2a_sel[0]          ; Merged with controller:inst2|mac2b_sel[0] ;
-; Total Number of Removed Registers = 98 ;                                           ;
-+----------------------------------------+-------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++---------------------------------------+-------------------------------------------+
+; Register name                         ; Reason for Removal                        ;
++---------------------------------------+-------------------------------------------+
+; controller:inst2|mac2b_sel[0]         ; Merged with controller:inst2|mac2a_sel[0] ;
+; Total Number of Removed Registers = 1 ;                                           ;
++---------------------------------------+-------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -390,12 +275,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 429   ;
+; Total registers                              ; 184   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
-; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 340   ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 288   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 165   ;
+; Number of registers using Asynchronous Load  ; 7     ;
+; Number of registers using Clock Enable       ; 124   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -405,22 +290,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |transmult|controller:inst2|output_counter[5]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |transmult|mac:mac1|feedback_gate:inst1|counter[1] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |transmult|mac:mac2|feedback_gate:inst1|counter[1] ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; Yes        ; |transmult|output_register:inst1|dout[15]          ;
-; 64:1               ; 6 bits    ; 252 LEs       ; 72 LEs               ; 180 LEs                ; Yes        ; |transmult|controller:inst2|mac1_output_sel[2]     ;
-; 64:1               ; 4 bits    ; 168 LEs       ; 44 LEs               ; 124 LEs                ; Yes        ; |transmult|controller:inst2|reg_out_sel[3]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |transmult|mac:mac2|feedback_gate:inst1|counter[0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |transmult|controller:inst2|mac_output_counter[5]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------+
-; Source assignments for mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder ;
-+---------------------------+-------+------+---------------------------------------------------+
-; Assignment                ; Value ; From ; To                                                ;
-+---------------------------+-------+------+---------------------------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                 ;
-+---------------------------+-------+------+---------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -432,67 +304,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+-------+------+---------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+---------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                          ;
-+------------------------+-------------+---------------------------------------------------------------+
-; LPM_WIDTH              ; 16          ; Signed Integer                                                ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                       ;
-; LPM_DIRECTION          ; ADD         ; Untyped                                                       ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                       ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                       ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                       ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                       ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                       ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                       ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                            ;
-; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                       ;
-; USE_WYS                ; OFF         ; Untyped                                                       ;
-; STYLE                  ; FAST        ; Untyped                                                       ;
-; CBXI_PARAMETER         ; add_sub_9eh ; Untyped                                                       ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                  ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                ;
-+------------------------+-------------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mac:mac1|mult1:inst|lpm_mult:lpm_mult_component ;
-+------------------------------------------------+----------+----------------------------------+
-; Parameter Name                                 ; Value    ; Type                             ;
-+------------------------------------------------+----------+----------------------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                       ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                     ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                     ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                   ;
-; LPM_WIDTHA                                     ; 8        ; Signed Integer                   ;
-; LPM_WIDTHB                                     ; 8        ; Signed Integer                   ;
-; LPM_WIDTHP                                     ; 16       ; Signed Integer                   ;
-; LPM_WIDTHR                                     ; 0        ; Untyped                          ;
-; LPM_WIDTHS                                     ; 1        ; Untyped                          ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                          ;
-; LPM_PIPELINE                                   ; 0        ; Untyped                          ;
-; LATENCY                                        ; 0        ; Untyped                          ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                          ;
-; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                          ;
-; USE_EAB                                        ; OFF      ; Untyped                          ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped                          ;
-; DEVICE_FAMILY                                  ; Cyclone  ; Untyped                          ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped                          ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K              ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                          ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                          ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                          ;
-; CBXI_PARAMETER                                 ; mult_o0n ; Untyped                          ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                          ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                          ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                          ;
-+------------------------------------------------+----------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+; Source assignments for mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder ;
++---------------------------+-------+------+---------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                ;
++---------------------------+-------+------+---------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                                 ;
++---------------------------+-------+------+---------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -634,13 +452,76 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+---------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                          ;
++------------------------+-------------+---------------------------------------------------------------+
+; LPM_WIDTH              ; 16          ; Signed Integer                                                ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                       ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                       ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                       ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                       ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                       ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                       ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                            ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                       ;
+; USE_WYS                ; OFF         ; Untyped                                                       ;
+; STYLE                  ; FAST        ; Untyped                                                       ;
+; CBXI_PARAMETER         ; add_sub_9eh ; Untyped                                                       ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                ;
++------------------------+-------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mac:mac1|mult1:inst|lpm_mult:lpm_mult_component ;
++------------------------------------------------+----------+----------------------------------+
+; Parameter Name                                 ; Value    ; Type                             ;
++------------------------------------------------+----------+----------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE                   ;
+; LPM_WIDTHA                                     ; 8        ; Signed Integer                   ;
+; LPM_WIDTHB                                     ; 8        ; Signed Integer                   ;
+; LPM_WIDTHP                                     ; 16       ; Signed Integer                   ;
+; LPM_WIDTHR                                     ; 0        ; Untyped                          ;
+; LPM_WIDTHS                                     ; 1        ; Untyped                          ;
+; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped                          ;
+; LPM_PIPELINE                                   ; 0        ; Untyped                          ;
+; LATENCY                                        ; 0        ; Untyped                          ;
+; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped                          ;
+; INPUT_B_IS_CONSTANT                            ; NO       ; Untyped                          ;
+; USE_EAB                                        ; OFF      ; Untyped                          ;
+; MAXIMIZE_SPEED                                 ; 5        ; Untyped                          ;
+; DEVICE_FAMILY                                  ; Cyclone  ; Untyped                          ;
+; CARRY_CHAIN                                    ; MANUAL   ; Untyped                          ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K              ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped                          ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped                          ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped                          ;
+; CBXI_PARAMETER                                 ; mult_o0n ; Untyped                          ;
+; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped                          ;
+; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped                          ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped                          ;
++------------------------------------------------+----------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------+
 ; lpm_mult Parameter Settings by Entity Instance                                          ;
 +---------------------------------------+-------------------------------------------------+
 ; Name                                  ; Value                                           ;
 +---------------------------------------+-------------------------------------------------+
 ; Number of entity instances            ; 2                                               ;
-; Entity Instance                       ; mac:mac1|mult1:inst|lpm_mult:lpm_mult_component ;
+; Entity Instance                       ; mac:mac2|mult1:inst|lpm_mult:lpm_mult_component ;
 ;     -- LPM_WIDTHA                     ; 8                                               ;
 ;     -- LPM_WIDTHB                     ; 8                                               ;
 ;     -- LPM_WIDTHP                     ; 16                                              ;
@@ -651,7 +532,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                            ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                              ;
-; Entity Instance                       ; mac:mac2|mult1:inst|lpm_mult:lpm_mult_component ;
+; Entity Instance                       ; mac:mac1|mult1:inst|lpm_mult:lpm_mult_component ;
 ;     -- LPM_WIDTHA                     ; 8                                               ;
 ;     -- LPM_WIDTHB                     ; 8                                               ;
 ;     -- LPM_WIDTHP                     ; 16                                              ;
@@ -671,7 +552,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 304 01/25/2010 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Dec 05 14:20:15 2016
+    Info: Processing started: Wed Dec 07 12:13:28 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off transmult -c transmult
 Info: Found 1 design units, including 1 entities, in source file reg8bit.v
     Info: Found entity 1: reg8bit
@@ -703,46 +584,10 @@ Info: Found 1 design units, including 1 entities, in source file output_register
     Info: Found entity 1: output_register
 Info: Found 1 design units, including 1 entities, in source file from_pos_half_cycle_buffer.v
     Info: Found entity 1: from_pos_half_cycle_buffer
-Warning (10227): Verilog HDL Port Declaration warning at from_pos_half_cycle_buffer.v(5): data type declaration for "dout" declares packed dimensions but the port declaration declaration does not
-Info (10499): HDL info at from_pos_half_cycle_buffer.v(7): see declaration for object "dout"
 Info: Elaborating entity "transmult" for the top level hierarchy
 Info: Elaborating entity "controller" for hierarchy "controller:inst2"
-Info: Elaborating entity "output_register" for hierarchy "output_register:inst1"
-Info: Elaborating entity "mac" for hierarchy "mac:mac1"
-Info: Elaborating entity "feedback_gate" for hierarchy "mac:mac1|feedback_gate:inst1"
-Info: Elaborating entity "adder1" for hierarchy "mac:mac1|adder1:inst2"
-Info: Elaborating entity "lpm_add_sub" for hierarchy "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborated megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
-Info: Instantiated megafunction "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component" with the following parameter:
-    Info: Parameter "lpm_direction" = "ADD"
-    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
-    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
-    Info: Parameter "lpm_width" = "16"
-Info: Elaborating entity "addcore" for hierarchy "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder"
-Info: Elaborated megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder", which is child of megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborating entity "a_csnbuffer" for hierarchy "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node"
-Info: Elaborated megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborating entity "a_csnbuffer" for hierarchy "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node"
-Info: Elaborated megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborating entity "altshift" for hierarchy "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs"
-Info: Elaborated megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborating entity "altshift" for hierarchy "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs"
-Info: Elaborated megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "mac:mac1|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborating entity "dcfilter" for hierarchy "mac:mac1|dcfilter:inst3"
-Info: Elaborating entity "mult1" for hierarchy "mac:mac1|mult1:inst"
-Info: Elaborating entity "lpm_mult" for hierarchy "mac:mac1|mult1:inst|lpm_mult:lpm_mult_component"
-Info: Elaborated megafunction instantiation "mac:mac1|mult1:inst|lpm_mult:lpm_mult_component"
-Info: Instantiated megafunction "mac:mac1|mult1:inst|lpm_mult:lpm_mult_component" with the following parameter:
-    Info: Parameter "lpm_hint" = "MAXIMIZE_SPEED=5"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
-    Info: Parameter "lpm_type" = "LPM_MULT"
-    Info: Parameter "lpm_widtha" = "8"
-    Info: Parameter "lpm_widthb" = "8"
-    Info: Parameter "lpm_widthp" = "16"
-Info: Found 1 design units, including 1 entities, in source file db/mult_o0n.tdf
-    Info: Found entity 1: mult_o0n
-Info: Elaborating entity "mult_o0n" for hierarchy "mac:mac1|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated"
+Warning (10036): Verilog HDL or VHDL warning at controller.v(13): object "reading" assigned a value but never read
+Info: Elaborating entity "from_pos_half_cycle_buffer" for hierarchy "from_pos_half_cycle_buffer:inst3"
 Info: Elaborating entity "mac_input_selector" for hierarchy "mac_input_selector:inst11"
 Info: Elaborating entity "REG_MUX" for hierarchy "mac_input_selector:inst11|REG_MUX:mac1_input_a"
 Info: Elaborating entity "lpm_mux" for hierarchy "mac_input_selector:inst11|REG_MUX:mac1_input_a|lpm_mux:lpm_mux_component"
@@ -757,21 +602,56 @@ Info: Found 1 design units, including 1 entities, in source file db/mux_ugc.tdf
 Info: Elaborating entity "mux_ugc" for hierarchy "mac_input_selector:inst11|REG_MUX:mac1_input_a|lpm_mux:lpm_mux_component|mux_ugc:auto_generated"
 Info: Elaborating entity "matrix_register" for hierarchy "matrix_register:inst"
 Info: Elaborating entity "reg8bit" for hierarchy "matrix_register:inst|reg8bit:a11"
-Info: Elaborating entity "from_pos_half_cycle_buffer" for hierarchy "from_pos_half_cycle_buffer:inst3"
-Info: Ignored 292 buffer(s)
-    Info: Ignored 292 SOFT buffer(s)
-Info: Ignored 220 buffer(s)
-    Info: Ignored 220 SOFT buffer(s)
+Info: Elaborating entity "mac" for hierarchy "mac:mac2"
+Info: Elaborating entity "feedback_gate" for hierarchy "mac:mac2|feedback_gate:inst1"
+Info: Elaborating entity "adder1" for hierarchy "mac:mac2|adder1:inst2"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "ADD"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "16"
+Info: Elaborating entity "addcore" for hierarchy "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder"
+Info: Elaborated megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder", which is child of megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "a_csnbuffer" for hierarchy "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node"
+Info: Elaborated megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "a_csnbuffer" for hierarchy "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node"
+Info: Elaborated megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "altshift" for hierarchy "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs"
+Info: Elaborated megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "altshift" for hierarchy "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs"
+Info: Elaborated megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "mac:mac2|adder1:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "dcfilter" for hierarchy "mac:mac2|dcfilter:inst3"
+Info: Elaborating entity "mult1" for hierarchy "mac:mac2|mult1:inst"
+Info: Elaborating entity "lpm_mult" for hierarchy "mac:mac2|mult1:inst|lpm_mult:lpm_mult_component"
+Info: Elaborated megafunction instantiation "mac:mac2|mult1:inst|lpm_mult:lpm_mult_component"
+Info: Instantiated megafunction "mac:mac2|mult1:inst|lpm_mult:lpm_mult_component" with the following parameter:
+    Info: Parameter "lpm_hint" = "MAXIMIZE_SPEED=5"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_MULT"
+    Info: Parameter "lpm_widtha" = "8"
+    Info: Parameter "lpm_widthb" = "8"
+    Info: Parameter "lpm_widthp" = "16"
+Info: Found 1 design units, including 1 entities, in source file db/mult_o0n.tdf
+    Info: Found entity 1: mult_o0n
+Info: Elaborating entity "mult_o0n" for hierarchy "mac:mac2|mult1:inst|lpm_mult:lpm_mult_component|mult_o0n:auto_generated"
+Info: Elaborating entity "output_register" for hierarchy "output_register:inst1"
+Info: Ignored 146 buffer(s)
+    Info: Ignored 146 SOFT buffer(s)
+Info: Ignored 84 buffer(s)
+    Info: Ignored 84 SOFT buffer(s)
 Info: Generated suppressed messages file C:/Users/Eric/Documents/Fall 2016/CSE 5387/Project (old)/transmult.map.smsg
-Info: Implemented 1113 device resources after synthesis - the final resource count might be different
+Info: Implemented 518 device resources after synthesis - the final resource count might be different
     Info: Implemented 11 input pins
     Info: Implemented 47 output pins
-    Info: Implemented 1055 logic cells
+    Info: Implemented 460 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 249 megabytes
-    Info: Processing ended: Mon Dec 05 14:20:21 2016
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Wed Dec 07 12:13:32 2016
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+
